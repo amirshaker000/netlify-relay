@@ -297,15 +297,8 @@ vless://UUID@YOUR_NETLIFY_DOMAIN:443?encryption=none&security=tls&sni=YOUR_NETLI
 | `YOUR_NETLIFY_DOMAIN` | Your Netlify domain, for example `your-site.netlify.app` |
 | `YOUR_PATH` | Your backend path |
 
-Recommended:
 
-```txt
-address = your-site.netlify.app
-sni = your-site.netlify.app
-host = your-site.netlify.app
-```
-
-Do not use these as address/SNI unless you have permission:
+Use this sni - adress for your config:
 
 ```txt
 kubernetes.io
