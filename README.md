@@ -1,4 +1,4 @@
-# 🚀 Netlify XHTTP Relay
+/# 🚀 Netlify XHTTP Relay
 
 > Simple Netlify Edge Function relay project  
 > Created by **amirs**
@@ -298,7 +298,7 @@ vless://UUID@YOUR_NETLIFY_DOMAIN:443?encryption=none&security=tls&sni=YOUR_NETLI
 | `YOUR_PATH` | Your backend path |
 
 
-Use this sni - adress for your config:
+Use this sni - address for your config:
 
 ```txt
 kubernetes.io
