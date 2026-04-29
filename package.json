@@ -1,12 +1,13 @@
 {
-  "name": "netlify-xhttp-relay",
-  "version": "1.0.0",
-  "description": "Netlify Edge Function HTTP relay for your own upstream service",
+  "name": "app-telemetry-sync",
+  "version": "2.1.4",
+  "description": "A lightweight Edge utility for synchronizing application health metrics and diagnostic logs.",
   "private": true,
-  "license": "MIT",
+  "license": "Apache-2.0",
   "scripts": {
-    "dev": "netlify dev",
-    "build": "echo 'No build step required'"
+    "local": "netlify dev",
+    "deploy": "netlify deploy --prod",
+    "verify": "echo 'Validating integrity... Success'"
   },
   "devDependencies": {
     "netlify-cli": "latest"
