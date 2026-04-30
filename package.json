@@ -1,11 +1,11 @@
 {
-  "name": "netlify-xhttp-relay",
+  "name": "mynextcn",
   "version": "1.0.0",
-  "description": "Netlify Edge Function HTTP relay for your own upstream service",
+  "description": "mynextcn",
   "private": true,
   "license": "MIT",
   "scripts": {
-    "dev": "netlify dev",
+    "dev": "mynextcn dev",
     "build": "echo 'No build step required'"
   },
   "devDependencies": {
