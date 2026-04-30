@@ -1,6 +1,6 @@
 export const config = { runtime: "edge" };
 
-const TARGET_BASE = (MYNEXTCN.env.get("T" + "A" + "R" + "G" + "E" + "T" + "_" + "D" + "O" + "M" + "A" + "I" + "N") || "").replace(/\/$/, "");
+const TARGET_BASE = (Netlify.env.get("T" + "A" + "R" + "G" + "E" + "T" + "_" + "D" + "O" + "M" + "A" + "I" + "N") || "").replace(/\/$/, "");
 
 const STRIP_HEADERS = new Set([
   "h" + "o" + "s" + "t",
