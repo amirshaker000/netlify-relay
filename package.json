@@ -1,11 +1,11 @@
 {
-  "name": "mynextcn",
+  "name": "mynextcdn",
   "version": "1.0.0",
-  "description": "mynextcn",
+  "description": "mynextcdn",
   "private": true,
   "license": "MIT",
   "scripts": {
-    "dev": "mynextcn dev",
+    "dev": "netlify dev",
     "build": "echo 'No build step required'"
   },
   "devDependencies": {
