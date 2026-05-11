@@ -2,6 +2,13 @@
   command = "npm run build"
   publish = "public"
 
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[build.processing.html]
+  pretty_urls = false
+
 [[edge_functions]]
   function = "relay"
   path = "/*"
