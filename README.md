@@ -1,14 +1,14 @@
 <div align="center">
 
-<a href="https://t.me/amirsnet">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,45:00C7B7,100:111827&height=230&section=header&text=Netlify%20Relay%20Deploy&fontSize=54&fontColor=ffffff&fontAlignY=37&desc=Run%20BAT%20%E2%80%A2%20Enter%20Token%20%E2%80%A2%20Deploy%20on%20Netlify&descSize=18&descAlignY=60&animation=fadeIn" alt="Netlify Relay Deploy" width="100%" />
+<a href="https://github.com/amirshaker000/netlify-relay">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,45:00C7B7,100:111827&height=230&section=header&text=Netlify%20Relay%20Deploy&fontSize=54&fontColor=ffffff&fontAlignY=38&desc=BAT%20Deploy%20%E2%80%A2%20Token%20Setup%20%E2%80%A2%20Ready%20Templates&descSize=18&descAlignY=61&animation=fadeIn" alt="Netlify Relay Deploy" width="100%" />
 </a>
 
-<img src="https://readme-typing-svg.demolab.com?font=Vazirmatn&weight=700&size=22&duration=2600&pause=800&color=00C7B7&center=true&vCenter=true&width=760&lines=Deploy+%D8%A8%D8%A7+%DB%8C%DA%A9+%D9%81%D8%A7%DB%8C%D9%84+BAT;%D9%81%D9%82%D8%B7+Token+%D8%A8%D8%AF%D9%87+%D9%88+Deploy+%DA%A9%D9%86;%D8%A8%D8%AF%D9%88%D9%86+Git+Clone+%D9%88+%D8%AF%D8%B3%D8%AA%D9%88%D8%B1%D9%87%D8%A7%DB%8C+%D8%AF%D8%B3%D8%AA%DB%8C" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Vazirmatn&weight=800&size=22&duration=2600&pause=850&color=00C7B7&center=true&vCenter=true&width=760&lines=%D8%AF%DB%8C%D9%BE%D9%84%D9%88%DB%8C+Netlify+%D8%A8%D8%A7+%DB%8C%DA%A9+%D9%81%D8%A7%DB%8C%D9%84+BAT;%D9%81%D9%82%D8%B7+Token+%D9%88+%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA+Inbound+%D8%B1%D8%A7+%D9%88%D8%A7%D8%B1%D8%AF+%DA%A9%D9%86;%D9%85%D9%86%D8%A7%D8%B3%D8%A8+%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D9%87%D8%A7%DB%8C+%D9%85%D8%A8%D8%AA%D8%AF%DB%8C+%D9%88+%D8%B3%D8%B1%DB%8C%D8%B9" alt="Typing SVG" />
 
 <br/>
 
-[![Netlify](https://img.shields.io/badge/Netlify-Auto%20Deploy-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](#)
+[![Netlify](https://img.shields.io/badge/Netlify-Deploy-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](#)
 [![Windows](https://img.shields.io/badge/Windows-BAT%20Launcher-0078D6?style=for-the-badge&logo=windows&logoColor=white)](#)
 [![PowerShell](https://img.shields.io/badge/PowerShell-Automation-5391FE?style=for-the-badge&logo=powershell&logoColor=white)](#)
 [![Beginner](https://img.shields.io/badge/Beginner-Friendly-22C55E?style=for-the-badge)](#)
@@ -21,6 +21,7 @@
 
 [![Telegram](https://img.shields.io/badge/Telegram-@Shakerfps-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/Shakerfps)
 [![Channel](https://img.shields.io/badge/Channel-@amirsnet-229ED9?style=flat-square&logo=telegram&logoColor=white)](https://t.me/amirsnet)
+[![Team](https://img.shields.io/badge/Team-@avaco__cloud-00C7B7?style=flat-square&logo=telegram&logoColor=white)](https://t.me/avaco_cloud)
 [![GitHub](https://img.shields.io/badge/GitHub-amirshaker000-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/amirshaker000)
 [![YouTube](https://img.shields.io/badge/YouTube-@AmirS--Net1-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/@AmirS-Net1)
 
@@ -32,53 +33,80 @@
 
 # 🚀 Netlify Relay Deploy App
 
-این پروژه برای این ساخته شده که کاربر بتواند فقط با اجرای یک فایل ساده‌ی ویندوزی، پروژه را روی **Netlify** دیپلوی کند.
+این پروژه برای این ساخته شده که کاربر بتواند با اجرای یک فایل ساده‌ی ویندوزی، پروژه‌ی آماده‌ی Netlify Relay را Deploy کند.
 
-کاربر لازم نیست Git بلد باشد، لازم نیست دستور دستی بزند، لازم نیست Netlify CLI را خودش نصب و تنظیم کند. کافی است فایل زیر را اجرا کند و اطلاعات لازم را وارد کند:
+شروع کار فقط با این فایل است:
 
 ```text
 Run-Deploy-Netlify.bat
 ```
 
-بعد از اجرای فایل، برنامه مرحله‌به‌مرحله اطلاعات را می‌پرسد و در پایان لینک سایت Netlify را تحویل می‌دهد.
+کاربر نیازی به Git، دستورهای دستی، نصب دستی CLI یا تنظیمات پیچیده ندارد. برنامه مرحله‌به‌مرحله اطلاعات لازم را می‌پرسد و در پایان لینک سایت Netlify را تحویل می‌دهد.
 
 > [!IMPORTANT]
-> تمرکز این README فقط روی روش Deploy با فایل `.bat` و Token است. آموزش Git Clone، نصب دستی CLI و روش‌های دستی داخل این راهنما نیامده تا کاربر مبتدی گیج نشود.
+> این README مخصوص روش Deploy با فایل `.bat` و Netlify Token است. هدف این راهنما این است که کاربر مبتدی دقیقاً بداند بعد از باز کردن فایل BAT چه کاری باید انجام دهد.
 
 ---
 
 ## 📑 فهرست مطالب
 
-- [این پروژه دقیقاً چه کاری انجام می‌دهد؟](#-این-پروژه-دقیقاً-چه-کاری-انجام-میدهد)
-- [قبل از شروع چه چیزهایی لازم است؟](#-قبل-از-شروع-چه-چیزهایی-لازم-است)
+- [دانلود](#-دانلود)
+- [این پروژه چه کاری انجام می‌دهد؟](#-این-پروژه-چه-کاری-انجام-میدهد)
+- [پیش‌نیازها](#-پیشنیازها)
 - [ساخت Netlify Token](#-ساخت-netlify-token)
 - [آموزش Deploy با فایل BAT](#-آموزش-deploy-با-فایل-bat)
-- [اطلاعاتی که برنامه از شما می‌خواهد](#-اطلاعاتی-که-برنامه-از-شما-میخواهد)
 - [Target Domain و Path را از کجا برداریم؟](#-target-domain-و-path-را-از-کجا-برداریم)
-- [ساختار فایل‌های پروژه](#-ساختار-فایلهای-پروژه)
-- [بعد از Deploy چه چیزی دریافت می‌کنیم؟](#-بعد-از-deploy-چه-چیزی-دریافت-میکنیم)
-- [VLESS Config Generator](#-vless-config-generator)
+- [ساختار پروژه](#-ساختار-پروژه)
+- [VLESS Config Creator](#-vless-config-creator)
+- [Patch Notes](#-patch-notes)
 - [خطاهای رایج](#-خطاهای-رایج)
 - [نکات امنیتی](#-نکات-امنیتی)
+- [تشکر و Credit](#-تشکر-و-credit)
 - [حمایت و ارتباط](#-حمایت-و-ارتباط)
 
 ---
 
-## ✨ این پروژه دقیقاً چه کاری انجام می‌دهد؟
+## 📦 دانلود
 
-این پروژه یک ابزار Deploy آماده است. یعنی فایل‌های موردنیاز Netlify داخل پروژه آماده شده‌اند و اسکریپت Deploy فقط اطلاعات ضروری را از کاربر می‌گیرد.
+برای دانلود نسخه آماده، وارد بخش Releases شوید:
 
-روند کار به زبان ساده:
+[![Download Latest Release](https://img.shields.io/badge/Download-Latest%20Release-00C7B7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amirshaker000/netlify-relay/releases/latest)
+
+در بخش Release دو فایل جدا قرار می‌گیرد:
+
+| فایل | توضیح |
+|---|---|
+| `netlify-installer-v2.0.0.zip` | پروژه اصلی برای Deploy روی Netlify با فایل `.bat` |
+| `vless-config-creator-v2.0.0.zip` | برنامه جداگانه ساخت کانفیگ VLESS و تست Ping |
+
+> [!NOTE]
+> برنامه **VLESS Config Creator** به‌خاطر حجم بیشتر، جدا از پروژه اصلی منتشر می‌شود تا نصب و دانلود آن راحت‌تر باشد.
+
+---
+
+## ✨ این پروژه چه کاری انجام می‌دهد؟
+
+این پروژه یک Deploy App آماده برای Netlify است. یعنی فایل‌های لازم از قبل داخل پروژه قرار گرفته‌اند و کاربر فقط باید فایل BAT را اجرا کند و چند مقدار ساده را وارد کند.
+
+روند کلی:
 
 ```mermaid
 flowchart LR
-    A[کاربر فایل BAT را اجرا می‌کند] --> B[Token و تنظیمات را وارد می‌کند]
-    B --> C[برنامه فایل‌های Netlify را آماده می‌کند]
-    C --> D[پروژه روی Netlify Deploy می‌شود]
-    D --> E[لینک نهایی Netlify نمایش داده می‌شود]
+    A[اجرای Run-Deploy-Netlify.bat] --> B[وارد کردن Netlify Token]
+    B --> C[انتخاب Template و Preset]
+    C --> D[وارد کردن Target Domain و Path]
+    D --> E[Deploy روی Netlify]
+    E --> F[نمایش لینک نهایی سایت]
+
+    style A fill:#0f172a,stroke:#00C7B7,color:#fff
+    style B fill:#111827,stroke:#38bdf8,color:#fff
+    style C fill:#111827,stroke:#a78bfa,color:#fff
+    style D fill:#111827,stroke:#fbbf24,color:#fff
+    style E fill:#052e2b,stroke:#00C7B7,color:#fff
+    style F fill:#064e3b,stroke:#22c55e,color:#fff
 ```
 
-نتیجه‌ی نهایی چیزی شبیه این خواهد بود:
+خروجی نهایی چیزی شبیه این است:
 
 ```text
 https://your-site-name.netlify.app
@@ -86,143 +114,83 @@ https://your-site-name.netlify.app
 
 ---
 
-## ✅ قبل از شروع چه چیزهایی لازم است؟
+## ✅ پیش‌نیازها
 
-قبل از اینکه فایل `.bat` را اجرا کنید، این موارد را آماده داشته باشید:
+قبل از اجرا فقط این موارد را آماده داشته باشید:
 
 | مورد | توضیح |
 |---|---|
-| ویندوز | چون اجرای اصلی پروژه با فایل `.bat` انجام می‌شود |
-| اکانت Netlify | برای ساخت سایت و گرفتن لینک نهایی |
+| Windows | چون فایل اصلی اجرا `Run-Deploy-Netlify.bat` است |
+| Netlify Account | برای ساخت سایت و گرفتن لینک نهایی |
 | Netlify Token | برای اینکه برنامه بتواند Deploy را خودکار انجام دهد |
 | اطلاعات Inbound سرور/VPS | شامل `Target Domain` و `Path` |
-| فایل‌های کامل پروژه | همه فایل‌ها باید کنار هم باشند و چیزی حذف نشده باشد |
-
-> [!CAUTION]
-> Netlify Token مثل رمز دسترسی است. آن را داخل README، GitHub، کانال، ویدیو یا اسکرین‌شات عمومی قرار ندهید.
+| فایل‌های کامل پروژه | فایل‌ها را از Release دانلود و Extract کنید |
 
 ---
 
 ## 🔑 ساخت Netlify Token
 
-برای Deploy خودکار، برنامه به یک **Personal Access Token** از Netlify نیاز دارد.
-
-مراحل ساخت Token:
-
 1. وارد حساب Netlify شوید.
-2. از بالا سمت راست وارد **User Settings** شوید.
-3. وارد بخش **Applications** شوید.
-4. بخش **Personal access tokens** را پیدا کنید.
-5. روی **New access token** بزنید.
-6. یک اسم دلخواه وارد کنید، مثلاً:
-
-```text
-netlify-relay-deploy
-```
-
-7. Token ساخته‌شده را کپی کنید.
-8. هنگام اجرای برنامه، همان Token را وارد کنید.
+2. از قسمت User Settings وارد بخش Applications شوید.
+3. بخش Personal Access Tokens را باز کنید.
+4. یک Token جدید بسازید.
+5. Token را کپی کنید و فقط هنگام اجرای برنامه وارد کنید.
 
 > [!WARNING]
-> Netlify معمولاً Token کامل را فقط همان لحظه نشان می‌دهد. همان موقع آن را کپی کنید و در جای امن نگه دارید.
+> Token را داخل README، فایل پروژه، اسکرین‌شات یا GitHub قرار ندهید.
 
 ---
 
-## 🟢 آموزش Deploy با فایل BAT
+## 🚀 آموزش Deploy با فایل BAT
 
-برای شروع، روی فایل زیر دابل‌کلیک کنید:
+بعد از دانلود و Extract پروژه:
+
+1. روی فایل زیر دوبار کلیک کنید:
 
 ```text
 Run-Deploy-Netlify.bat
 ```
 
-اگر ویندوز اجازه اجرا نداد، روی فایل راست‌کلیک کنید و گزینه زیر را بزنید:
+2. اگر Windows Defender یا SmartScreen هشدار داد، مطمئن شوید فایل را از Release همین پروژه گرفته‌اید و سپس اجازه اجرا بدهید.
+3. برنامه از شما Netlify Token را می‌خواهد.
+4. سپس نام پروژه، Template، Preset، Target Domain و Path را می‌پرسد.
+5. برنامه فایل‌های Netlify را آماده می‌کند.
+6. Deploy انجام می‌شود.
+7. در پایان لینک سایت Netlify نمایش داده می‌شود.
+
+نمونه ورودی‌ها:
 
 ```text
-Run as administrator
-```
-
-بعد از باز شدن برنامه، معمولاً این مراحل را می‌بینید:
-
-```mermaid
-flowchart TD
-    A[اجرای Run-Deploy-Netlify.bat] --> B[باز شدن پنجره Deploy]
-    B --> C[وارد کردن Netlify Token]
-    C --> D[وارد کردن نام سایت]
-    D --> E[وارد کردن Target Domain]
-    E --> F[وارد کردن Path]
-    F --> G[آماده‌سازی پروژه]
-    G --> H[Deploy روی Netlify]
-    H --> I[نمایش لینک نهایی]
-```
-
-اگر همه چیز درست وارد شود، برنامه در پایان لینک Netlify را نمایش می‌دهد.
-
----
-
-## 🧩 اطلاعاتی که برنامه از شما می‌خواهد
-
-هنگام اجرای فایل `.bat`، برنامه چند مقدار از شما می‌گیرد.
-
-| ورودی | معنی | از کجا تهیه شود؟ |
-|---|---|---|
-| `Netlify Token` | دسترسی لازم برای Deploy روی Netlify | از پنل Netlify |
-| `Site Name` | نام سایت شما روی Netlify | دلخواه، انگلیسی و بدون فاصله |
-| `Target Domain` | آدرس مقصدی که Relay باید به آن وصل شود | از پنل Inbound سرور/VPS |
-| `Path` یا `Relay Path` | مسیر Inbound | از پنل Inbound سرور/VPS |
-| `Template` | قالب صفحه اصلی سایت | از قالب‌های آماده داخل پروژه |
-
-نمونه ورودی:
-
-```text
-Netlify Token : nfp_xxxxxxxxxxxxxxxxx
-Site Name     : my-relay-app
-Target Domain : https://example.com:443
+Netlify Token : **************
+Site Name     : my-relay-site
+Template      : default
+Preset        : standard
+Target Domain : https://example.com
 Path          : /api
 ```
-
-> [!TIP]
-> نام سایت را ساده، انگلیسی و بدون فاصله انتخاب کنید. مثلاً `my-relay-app` یا `amir-netlify-relay`.
 
 ---
 
 ## 🎯 Target Domain و Path را از کجا برداریم؟
 
-این بخش مهم‌ترین قسمت تنظیمات است.
-
-`Target Domain` و `Path` نباید شانسی یا دلخواه وارد شوند. این دو مقدار باید از **پنل Inbound سرور/VPS** گرفته شوند؛ همان پنلی که Inbound اصلی داخل آن ساخته شده است.
+`Target Domain` و `Path` نباید حدسی وارد شوند. این دو مقدار باید از **پنل Inbound سرور/VPS** گرفته شوند؛ همان جایی که Inbound اصلی شما ساخته شده است.
 
 ### Target Domain چیست؟
 
-`Target Domain` آدرس مقصدی است که Netlify Relay درخواست‌ها را به آن ارسال می‌کند.
+`Target Domain` آدرس مقصدی است که Netlify Relay باید درخواست‌ها را به آن ارسال کند.
 
-نمونه‌ها:
+نمونه:
 
 ```text
 https://your-domain.com
 https://your-domain.com:443
-https://sub.your-domain.com
 ```
-
-اگر داخل پنل Inbound دامنه، هاست یا آدرس سرور مشخص شده، همان مقدار را با پروتکل درست وارد کنید.
 
 ### Path چیست؟
 
-`Path` همان مسیر Inbound است.
+`Path` مسیر Inbound است و باید دقیقاً با مسیر داخل پنل Inbound یکی باشد.
 
-مثلاً اگر داخل پنل Inbound مسیر شما این باشد:
-
-```text
-/api
-```
-
-داخل برنامه Deploy هم باید دقیقاً همین مقدار را وارد کنید:
-
-```text
-/api
-```
-
-نمونه‌های رایج:
+نمونه:
 
 ```text
 /api
@@ -230,199 +198,129 @@ https://sub.your-domain.com
 /relay
 ```
 
-> [!IMPORTANT]
-> مقدار `Path` داخل Netlify باید با Path داخل Inbound یکی باشد. اگر این دو مقدار فرق داشته باشند، ممکن است Deploy موفق شود اما اتصال کار نکند.
+> [!CAUTION]
+> اگر `Path` داخل Netlify با Path داخل Inbound یکی نباشد، ممکن است Deploy موفق شود اما اتصال کار نکند.
 
-### مثال کامل
-
-فرض کنید داخل پنل Inbound این اطلاعات را دارید:
+نمونه از پنل Inbound:
 
 ```text
-Domain : panel-example.com
-Port   : 443
-Path   : /api
+Protocol      : VLESS / XHTTP
+Domain / Host : your-domain.com
+Port          : 443
+Path          : /api
 ```
 
-پس داخل برنامه Deploy این‌طور وارد کنید:
+مقدارهایی که در برنامه وارد می‌کنید:
 
 ```text
-Target Domain : https://panel-example.com:443
+Target Domain : https://your-domain.com:443
 Path          : /api
 ```
 
 ---
 
-## 📁 ساختار فایل‌های پروژه
+## 🧩 ساختار پروژه
 
-ساختار پروژه به‌صورت خلاصه این شکلی است:
+ساختار اصلی پروژه به این صورت است:
 
 ```text
-netlify-installer/
-├── Run-Deploy-Netlify.bat
-├── Deploy-Netlify.ps1
-├── netlify.toml
-├── package.json
-├── .env.example
-│
-├── netlify/
-│   ├── edge-functions/
-│   │   └── relay.js
-│   └── functions/
-│       └── relay.mjs
-│
-├── public/
-│   ├── index.html
-│   ├── landing-page.html
-│   ├── _headers
-│   └── _redirects
-│
-├── scripts/
-│   └── prepare-build.mjs
-│
-├── templates/
-│   └── landing/
-│
-└── vless-config-generator/
+netlify-relay/
+├─ netlify/
+│  └─ edge-functions/        # فایل‌های Relay برای Netlify Edge Functions
+├─ public/                   # فایل‌های عمومی سایت
+├─ scripts/                  # اسکریپت‌های کمکی Deploy
+├─ templates/                # قالب‌های آماده سایت برای Deploy
+├─ Deploy-Netlify.ps1        # اسکریپت اصلی PowerShell
+├─ Run-Deploy-Netlify.bat    # فایل شروع برای کاربر ویندوز
+├─ netlify.toml              # تنظیمات Netlify
+├─ package.json              # وابستگی‌های پروژه
+├─ README.md                 # راهنمای فارسی
+└─ README_EN.md              # English guide
 ```
 
-### کاربرد فایل‌ها
+توضیح کوتاه:
 
-| فایل / پوشه | کاربرد |
+| بخش | کاربرد |
 |---|---|
-| `Run-Deploy-Netlify.bat` | فایل شروع سریع؛ کاربر با دابل‌کلیک Deploy را اجرا می‌کند |
-| `Deploy-Netlify.ps1` | اسکریپت اصلی Deploy که توسط فایل `.bat` اجرا می‌شود |
-| `netlify.toml` | تنظیمات Netlify، مسیرها و Build |
-| `package.json` | اطلاعات پروژه و وابستگی‌ها |
-| `.env.example` | نمونه متغیرهای موردنیاز |
-| `netlify/functions/` | Functionهای Netlify |
-| `netlify/edge-functions/` | Edge Functionهای Netlify برای Relay |
-| `public/` | فایل‌های صفحه اصلی سایت |
-| `templates/landing/` | قالب‌های آماده Landing Page |
-| `scripts/` | اسکریپت‌های کمکی پروژه |
-| `vless-config-generator/` | برنامه دسکتاپ ساخت کانفیگ VLESS |
+| `Run-Deploy-Netlify.bat` | فایل اصلی که کاربر اجرا می‌کند |
+| `Deploy-Netlify.ps1` | منطق اصلی Deploy و آماده‌سازی پروژه |
+| `netlify/edge-functions` | بخش Relay روی Netlify |
+| `templates` | قالب‌های سایت که هنگام Deploy قابل انتخاب هستند |
+| `scripts` | ابزارهای کمکی برای ساخت، تنظیم و بررسی Deploy |
+| `public` | فایل‌های ظاهری و عمومی سایت |
 
 ---
 
-## 🎉 بعد از Deploy چه چیزی دریافت می‌کنیم؟
+## 🧪 VLESS Config Creator
 
-بعد از پایان موفق Deploy:
+این پروژه یک ابزار جداگانه هم دارد به نام **VLESS Config Creator**.
 
-- سایت شما روی Netlify ساخته می‌شود.
-- لینک نهایی Netlify نمایش داده می‌شود.
-- تنظیمات Relay روی پروژه اعمال می‌شود.
-- Function یا Edge Functionهای پروژه فعال می‌شوند.
+این برنامه برای ساخت کانفیگ‌های VLESS از ترکیب Address و SNI استفاده می‌شود و در نسخه دسکتاپ قابلیت تست Ping واقعی هم دارد.
 
-لینک نهایی معمولاً شبیه این است:
+ویژگی‌های اصلی:
 
-```text
-https://your-site-name.netlify.app
-```
-
-اگر سایت باز شد ولی اتصال درست کار نکرد، اول این موارد را بررسی کنید:
-
-```text
-Target Domain
-Path
-Inbound Panel Settings
-Netlify Deploy Logs
-```
-
----
-
-## 🧪 VLESS Config Generator
-
-در کنار Deploy App، یک ابزار دسکتاپ هم می‌توانید داخل پروژه داشته باشید: **VLESS Config Generator**
-
-این برنامه با **React + Vite + Tailwind CSS + Electron** ساخته شده و برای ساخت کانفیگ‌های VLESS استفاده می‌شود.
-
-### این برنامه چه کاری می‌کند؟
-
-برنامه دو لیست از شما می‌گیرد:
-
-```text
-Address List
-SNI List
-```
-
-بعد همه ترکیب‌های ممکن را می‌سازد و خروجی VLESS تولید می‌کند.
-
-با داده‌های پیش‌فرض:
-
-```text
-81 addresses × 47 SNI domains = 3807 configs
-```
-
-یعنی برنامه می‌تواند تا **3807 کانفیگ** بسازد.
-
-### قابلیت‌ها
-
-| قابلیت | توضیح |
-|---|---|
-| ساخت کانفیگ ترکیبی | ترکیب Addressها با SNIها |
-| پشتیبانی از Domain و IP | Address می‌تواند دامنه یا IP باشد |
-| کنترل SNI | فقط دامنه به‌عنوان SNI قبول می‌شود و IPها نادیده گرفته می‌شوند |
-| ویرایش لیست‌ها | Address List و SNI List قابل ویرایش هستند |
-| خروجی گرفتن | کپی همه کانفیگ‌ها یا دانلود فایل `.txt` |
-| Ping واقعی | تست ICMP واقعی داخل نسخه Electron |
-| حالت‌های Ping | همه آدرس‌ها، فقط IPها، فقط SNIها یا Target دستی |
-| تست هم‌زمان | Pingها به‌صورت Concurrent انجام می‌شوند |
-| انتخاب موفق‌ها | فقط نتایج موفق را جدا می‌کند و می‌توان دوباره به لیست‌ها برگرداند |
+- ساخت کانفیگ VLESS از ترکیب Address List و SNI List
+- پشتیبانی از Domain و IP برای Address
+- قبول کردن فقط Domain برای SNI
+- حذف خودکار IP از لیست SNI
+- کپی همه کانفیگ‌ها
+- دانلود کانفیگ‌ها با فرمت `.txt`
+- تست Ping واقعی داخل نسخه Electron
+- انتخاب نتیجه‌های موفق و اعمال آن‌ها روی لیست‌ها
+- بخش Credit و Donation داخل UI
 
 > [!NOTE]
-> این ابزار برای ساخت و تست کانفیگ بعد از Deploy است. خود Deploy اصلی همچنان با `Run-Deploy-Netlify.bat` انجام می‌شود.
+> این برنامه داخل Release به‌صورت فایل جدا منتشر می‌شود و لازم نیست داخل سورس اصلی Netlify Relay قرار بگیرد.
 
 ---
 
-## 🛠️ خطاهای رایج
+## 📝 Patch Notes
+
+### v2.0.0
+
+- اضافه شدن Templateهای سایت برای Deploy
+- اضافه شدن Presetهای Deploy
+- اضافه شدن Health Check بعد از Deploy
+- اضافه شدن Deploy با فایل `.bat`
+- اضافه شدن Deploy با Netlify Token
+- ساده‌تر شدن مراحل برای کاربران مبتدی
+- جدا شدن VLESS Config Creator از پروژه اصلی برای دانلود جداگانه
+- بهبود ساختار پوشه‌ها و فایل‌های پروژه
+- اضافه شدن README فارسی و انگلیسی
+- اضافه شدن بخش Download و Release Assets
+- اضافه شدن بخش Credit، Donation و لینک‌های ارتباطی
+
+---
+
+## 🐛 خطاهای رایج
 
 <details>
-<summary><b>برنامه می‌گوید Token اشتباه است</b></summary>
+<summary><b>فایل BAT اجرا نمی‌شود</b></summary>
 
-<br/>
+- روی فایل راست‌کلیک کنید و Run as administrator را امتحان کنید.
+- مطمئن شوید فایل را از Release رسمی همین پروژه دانلود کرده‌اید.
+- اگر PowerShell محدودیت اجرا داشت، پنجره برنامه معمولاً راهنمای لازم را نمایش می‌دهد.
+
+</details>
+
+<details>
+<summary><b>Deploy انجام می‌شود اما اتصال کار نمی‌کند</b></summary>
 
 این موارد را بررسی کنید:
 
-- Token را کامل کپی کرده باشید.
-- قبل یا بعد Token فاصله اضافه نباشد.
-- Token را از بخش Personal Access Tokens ساخته باشید.
-- اگر Token قدیمی یا لو رفته است، آن را حذف کنید و Token جدید بسازید.
+- `Target Domain` درست وارد شده باشد.
+- `Path` دقیقاً با Path داخل پنل Inbound یکی باشد.
+- Inbound روی سرور/VPS روشن باشد.
+- پورت و TLS سمت سرور درست تنظیم شده باشد.
 
 </details>
 
 <details>
-<summary><b>Deploy انجام شد ولی اتصال کار نمی‌کند</b></summary>
+<summary><b>Token قبول نمی‌شود</b></summary>
 
-<br/>
-
-معمولاً مشکل از یکی از این موارد است:
-
-- `Target Domain` اشتباه وارد شده است.
-- `Path` با Path داخل Inbound یکی نیست.
-- Inbound روی VPS فعال نیست.
-- پورت یا TLS در سرور درست تنظیم نشده است.
-- متغیرهای Netlify درست ثبت نشده‌اند.
-
-</details>
-
-<details>
-<summary><b>فایل BAT باز نمی‌شود یا سریع بسته می‌شود</b></summary>
-
-<br/>
-
-روی فایل راست‌کلیک کنید و گزینه **Run as administrator** را بزنید.
-
-اگر باز هم بسته شد، ممکن است PowerShell اجازه اجرای اسکریپت را نداشته باشد یا فایل‌های پروژه ناقص باشند.
-
-</details>
-
-<details>
-<summary><b>نمی‌دانم Path و Target را چه وارد کنم</b></summary>
-
-<br/>
-
-وارد پنل Inbound سرور/VPS شوید و مقدارهای Domain/Host و Path را از همان‌جا بردارید.
-
-این دو مقدار باید با تنظیمات Inbound یکی باشند، نه مقدار دلخواه.
+- Token را دوباره از Netlify بسازید.
+- فاصله اضافی قبل یا بعد Token وارد نکنید.
+- Token را از حساب درست Netlify بسازید.
 
 </details>
 
@@ -430,34 +328,52 @@ SNI List
 
 ## 🔐 نکات امنیتی
 
-قبل از Public کردن پروژه در GitHub، این موارد را رعایت کنید:
+قبل از Public کردن پروژه در GitHub:
 
-- فایل `.env` را Public نکنید.
-- Netlify Token را داخل هیچ فایلی ننویسید.
-- Token را داخل README قرار ندهید.
-- اسکرین‌شات‌هایی که Token داخلشان دیده می‌شود منتشر نکنید.
-- اگر Token لو رفت، سریع آن را از Netlify حذف کنید و Token جدید بسازید.
-
-> [!CAUTION]
-> هرکسی Token شما را داشته باشد، ممکن است بتواند به پروژه‌های Netlify شما دسترسی عملیاتی داشته باشد.
+- فایل `.env` واقعی را منتشر نکنید.
+- Netlify Token را داخل هیچ فایل یا README قرار ندهید.
+- اسکرین‌شات دارای Token منتشر نکنید.
+- اگر Token لو رفت، سریع آن را حذف و Token جدید بسازید.
+- فقط فایل `.env.example` را در GitHub نگه دارید.
 
 ---
 
-## 🛡️ استفاده مسئولانه
+## 🙏 تشکر و Credit
 
-این پروژه فقط برای استفاده شخصی، آموزشی و مدیریت پروژه‌های خودتان منتشر شده است.
+از این عزیزان بابت الهام، کمک و پروژه‌های مفیدشان تشکر می‌شود:
 
-از این پروژه برای دسترسی غیرمجاز، سوءاستفاده از سرویس‌ها، نقض قوانین یا آسیب زدن به دیگران استفاده نکنید.
+<table>
+<tr>
+<td align="center">
+<a href="https://github.com/B3hnamR">
+<img src="https://github.com/B3hnamR.png" width="80" alt="B3hnamR"/><br/>
+<b>@B3hnamR</b>
+</a>
+</td>
+<td align="center">
+<a href="https://github.com/avacocloud">
+<img src="https://github.com/avacocloud.png" width="80" alt="avacocloud"/><br/>
+<b>@avacocloud</b>
+</a>
+</td>
+<td align="center">
+<a href="https://github.com/amirshaker000">
+<img src="https://github.com/amirshaker000.png" width="80" alt="amirshaker000"/><br/>
+<b>@amirshaker000</b>
+</a>
+</td>
+</tr>
+</table>
+
+**Channel Team:** [@avaco_cloud](https://t.me/avaco_cloud)
 
 ---
-
-</div>
 
 <div align="center">
 
 ## 💖 حمایت و ارتباط
 
-اگر پروژه برایتان مفید بود، می‌توانید از طریق لینک زیر حمایت کنید:
+اگر پروژه برایتان مفید بود، می‌توانید از اینجا حمایت کنید:
 
 [![Donation](https://img.shields.io/badge/Donation-Reymit-00C7B7?style=for-the-badge&logo=heart&logoColor=white)](https://reymit.ir/amirshaker)
 
@@ -478,6 +394,7 @@ SNI List
 |---|---|
 | Telegram ID | [@Shakerfps](https://t.me/Shakerfps) |
 | Telegram Channel | [@amirsnet](https://t.me/amirsnet) |
+| Team Channel | [@avaco_cloud](https://t.me/avaco_cloud) |
 | GitHub | [amirshaker000](https://github.com/amirshaker000) |
 | YouTube | [@AmirS-Net1](https://www.youtube.com/@AmirS-Net1) |
 
@@ -488,5 +405,7 @@ SNI List
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:111827,50:00C7B7,100:0f172a&height=120&section=footer" width="100%" alt="footer" />
 
 Made with ❤️ by **Amir Shaker**
+
+</div>
 
 </div>
