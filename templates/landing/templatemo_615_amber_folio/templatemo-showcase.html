@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Free HTML CSS Templates - TemplateMo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-deep: #0b0b0f;
+            --bg-card: #141419;
+            --bg-elevated: #1c1c24;
+            --accent-warm: #e8a849;
+            --accent-warm-dim: rgba(232, 168, 73, 0.15);
+            --accent-warm-glow: rgba(232, 168, 73, 0.06);
+            --text-primary: #eeeef0;
+            --text-secondary: #8a8a96;
+            --text-tertiary: #55555f;
+            --border-subtle: rgba(255, 255, 255, 0.06);
+            --border-hover: rgba(255, 255, 255, 0.12);
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* ─── Header ─── */
+        header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(11, 11, 15, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: padding 0.4s var(--ease-out-expo);
+        }
+
+        header.compact { padding: 14px 40px; }
+
+        .logo {
+            font-family: 'Instrument Serif', serif;
+            font-size: 26px;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-dot {
+            width: 8px; height: 8px;
+            background: var(--accent-warm);
+            border-radius: 50%;
+        }
+
+        .header-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 20px;
+            border: 1px solid var(--border-subtle);
+            border-radius: 100px;
+            transition: all 0.3s ease;
+        }
+
+        .header-link:hover {
+            color: var(--text-primary);
+            border-color: var(--accent-warm);
+            background: var(--accent-warm-glow);
+        }
+
+        /* ─── Hero + Coverflow Section ─── */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, var(--accent-warm-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-eyebrow {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-warm);
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-family: 'Instrument Serif', serif;
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
+            font-weight: 400;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .hero-title em {
+            font-style: italic;
+            color: var(--accent-warm);
+        }
+
+        .hero-desc {
+            font-size: 17px;
+            color: var(--text-secondary);
+            max-width: 520px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* ─── 3D Coverflow (from Amber Folio) ─── */
+        .coverflow-wrapper {
+            width: 100%;
+            position: relative;
+            padding: 40px 0 80px;
+        }
+
+        .coverflow-container {
+            width: 900px;
+            max-width: 90vw;
+            height: clamp(320px, 40vh, 440px);
+            position: relative;
+            transform-style: preserve-3d;
+            margin: 0 auto;
+            perspective: 1200px;
+        }
+
+        .coverflow-item {
+            position: absolute;
+            width: clamp(240px, 30vh, 320px);
+            height: clamp(240px, 30vh, 320px);
+            left: 50%; top: 50%;
+            transform-origin: center center;
+            cursor: pointer;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+        }
+
+        @media (min-height: 900px) {
+            .coverflow-container { height: clamp(420px, 48vh, 520px); }
+            .coverflow-item {
+                width: clamp(300px, 34vh, 380px);
+                height: clamp(300px, 34vh, 380px);
+            }
+        }
+
+        @media (max-height: 768px) {
+            .coverflow-container { height: clamp(280px, 38vh, 360px); }
+            .coverflow-item {
+                width: clamp(200px, 26vh, 260px);
+                height: clamp(200px, 26vh, 260px);
+            }
+        }
+
+        /* Reflection */
+        .coverflow-item::after {
+            content: '';
+            position: absolute;
+            top: 100%; left: 0;
+            width: 100%; height: 100%;
+            background: inherit;
+            transform: scaleY(-1) translateY(1px);
+            opacity: 0.15;
+            filter: blur(2px);
+            mask: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0.1) 40%, transparent 60%);
+            -webkit-mask: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0.1) 40%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .portfolio-image {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.6s ease;
+        }
+
+        .coverflow-item:hover .portfolio-image { transform: scale(1.05); }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.3) 70%, transparent 100%);
+            padding: 30px;
+            transform: translateY(100px);
+            transition: transform 0.4s ease;
+        }
+
+        .coverflow-item:hover .portfolio-overlay { transform: translateY(0); }
+
+        .portfolio-category {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-warm);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .portfolio-title {
+            font-family: 'Instrument Serif', serif;
+            font-size: 22px;
+            font-weight: 400;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .portfolio-description {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Controls */
+        .coverflow-controls {
+            position: absolute;
+            bottom: 20px; left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 10;
+        }
+
+        .control-btn {
+            width: 45px; height: 45px;
+            border: 2px solid rgba(255,255,255,0.2);
+            background: rgba(20, 20, 25, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: var(--text-primary);
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .control-btn:hover {
+            background: var(--accent-warm);
+            border-color: var(--accent-warm);
+            color: var(--bg-deep);
+            transform: scale(1.1);
+        }
+
+        #playPauseBtn { padding-left: 2px; }
+        #playPauseBtn.playing { padding-left: 0; }
+
+        /* Indicators */
+        .indicators {
+            position: absolute;
+            bottom: -40px; left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .indicator {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicator.active {
+            width: 30px;
+            border-radius: 4px;
+            background: var(--accent-warm);
+        }
+
+        /* ─── Section Divider ─── */
+        .section-divider {
+            max-width: 1100px;
+            margin: 0 auto;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border-subtle), transparent);
+        }
+
+        /* ─── About Section ─── */
+        .about { padding: 120px 40px; }
+
+        .about-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-metric-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .metric-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 28px 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .metric-card:hover { border-color: var(--border-hover); transform: translateY(-3px); }
+
+        .metric-card:first-child {
+            border-color: rgba(232, 168, 73, 0.2);
+            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(232, 168, 73, 0.05) 100%);
+        }
+
+        .metric-value {
+            font-family: 'Instrument Serif', serif;
+            font-size: 42px;
+            color: var(--accent-warm);
+            letter-spacing: -1px;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .metric-label { font-size: 13px; color: var(--text-secondary); font-weight: 500; }
+
+        .section-eyebrow {
+            font-size: 12px; font-weight: 600;
+            letter-spacing: 3px; text-transform: uppercase;
+            color: var(--accent-warm);
+            margin-bottom: 20px;
+        }
+
+        .about-right h2 {
+            font-family: 'Instrument Serif', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 400;
+            letter-spacing: -1px;
+            line-height: 1.15;
+            margin-bottom: 24px;
+        }
+
+        .about-right h2 em { font-style: italic; color: var(--accent-warm); }
+
+        .about-text {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .about-highlights { margin-top: 30px; display: flex; flex-direction: column; gap: 14px; }
+
+        .highlight-item {
+            display: flex; align-items: center; gap: 14px;
+            font-size: 15px; color: var(--text-secondary);
+        }
+
+        .highlight-icon {
+            width: 32px; height: 32px;
+            background: var(--accent-warm-dim);
+            border-radius: var(--radius-sm);
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .highlight-icon svg { width: 16px; height: 16px; fill: var(--accent-warm); }
+
+        /* ─── CTA Section ─── */
+        .cta { padding: 120px 40px; text-align: center; position: relative; }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 800px; height: 500px;
+            background: radial-gradient(ellipse, var(--accent-warm-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-inner { max-width: 700px; margin: 0 auto; position: relative; }
+
+        .cta h2 {
+            font-family: 'Instrument Serif', serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 400;
+            letter-spacing: -1px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .cta h2 em { font-style: italic; color: var(--accent-warm); }
+
+        .cta-desc {
+            font-size: 17px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 16px 36px;
+            background: var(--accent-warm);
+            color: var(--bg-deep);
+            text-decoration: none;
+            font-weight: 600; font-size: 15px;
+            border-radius: 100px;
+            transition: all 0.3s var(--ease-out-expo);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(232, 168, 73, 0.3);
+        }
+
+        .btn-primary svg { width: 18px; height: 18px; transition: transform 0.3s ease; }
+        .btn-primary:hover svg { transform: translateX(3px); }
+
+        .btn-secondary {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 16px 36px;
+            background: transparent;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500; font-size: 15px;
+            border-radius: 100px;
+            border: 1px solid var(--border-subtle);
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--text-secondary);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        /* ─── Footer ─── */
+        footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        footer p { font-size: 13px; color: var(--text-tertiary); }
+        footer a { color: var(--text-secondary); text-decoration: none; transition: color 0.2s ease; }
+        footer a:hover { color: var(--accent-warm); }
+
+        /* ─── Scroll Reveal ─── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+        }
+
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ─── Responsive ─── */
+        @media (max-width: 1024px) {
+            .about-inner { grid-template-columns: 1fr; gap: 50px; }
+            .about-metric-grid { max-width: 400px; margin: 0 auto; }
+        }
+
+        @media (max-width: 768px) {
+            header { padding: 16px 20px; }
+            header.compact { padding: 12px 20px; }
+            .logo { font-size: 22px; }
+            .hero { padding: 80px 0; }
+            .about { padding: 80px 20px; }
+            .cta { padding: 80px 20px; }
+            .metric-card { padding: 22px 18px; }
+            .metric-value { font-size: 34px; }
+        }
+
+        @media (max-width: 480px) {
+            .cta-buttons { flex-direction: column; align-items: center; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <a href="https://templatemo.com" class="logo" target="_blank" rel="noopener">
+            <span class="logo-dot"></span>TemplateMo
+        </a>
+        <a href="https://templatemo.com/page/1" class="header-link" target="_blank" rel="noopener">Browse All Templates</a>
+    </header>
+
+    <!-- Hero + 3D Coverflow -->
+    <section class="hero" id="templates">
+        <div class="hero-header reveal">
+            <p class="hero-eyebrow">Latest Collection</p>
+            <h1 class="hero-title">Free HTML CSS <em>Templates</em></h1>
+            <p class="hero-desc">Handcrafted website templates ready to download. Pure HTML, CSS &amp; JavaScript — no frameworks, no signup, no cost.</p>
+        </div>
+
+        <div class="coverflow-wrapper reveal">
+            <div class="coverflow-container" id="coverflowContainer">
+
+                <div class="coverflow-item" data-index="0" data-url="https://templatemo.com/tm-614-quantix-saas">
+                    <img src="https://templatemo.com/thumbnails-360/tm-614-quantix-saas.jpg" alt="Quantix SaaS Template" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">TM-614</div>
+                        <h3 class="portfolio-title">Quantix</h3>
+                        <p class="portfolio-description">High-conversion SaaS landing page with pure HTML5, CSS3 &amp; vanilla JS</p>
+                    </div>
+                </div>
+
+                <div class="coverflow-item" data-index="1" data-url="https://templatemo.com/tm-613-frost-bakery">
+                    <img src="https://templatemo.com/thumbnails-360/tm-613-frost-bakery.jpg" alt="Frost Bakery Template" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">TM-613</div>
+                        <h3 class="portfolio-title">Frost</h3>
+                        <p class="portfolio-description">Bright single-page template for ice cream shops, bakeries &amp; dessert businesses</p>
+                    </div>
+                </div>
+
+                <div class="coverflow-item" data-index="2" data-url="https://templatemo.com/tm-612-parallax-starter">
+                    <img src="https://templatemo.com/thumbnails-360/tm-612-parallax-starter.jpg" alt="Parallax Starter Template" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">TM-612</div>
+                        <h3 class="portfolio-title">Parallax Starter</h3>
+                        <p class="portfolio-description">Smooth JS-driven parallax scrolling across five full-screen sections</p>
+                    </div>
+                </div>
+
+                <div class="coverflow-item" data-index="3" data-url="https://templatemo.com/tm-611-maison-doree">
+                    <img src="https://templatemo.com/thumbnails-360/tm-611-maison-doree.jpg" alt="Maison Doree Template" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">TM-611</div>
+                        <h3 class="portfolio-title">Maison Doree</h3>
+                        <p class="portfolio-description">Elegant template for gold jewelry boutiques &amp; luxury accessory brands</p>
+                    </div>
+                </div>
+
+                <div class="coverflow-item" data-index="4" data-url="https://templatemo.com/tm-610-aurum-gold">
+                    <img src="https://templatemo.com/thumbnails-360/tm-610-aurum-gold.jpg" alt="Aurum Gold Template" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">TM-610</div>
+                        <h3 class="portfolio-title">Aurum Gold</h3>
+                        <p class="portfolio-description">Dark-themed template for gold investment &amp; precious metals dealers</p>
+                    </div>
+                </div>
+
+                <div class="coverflow-item" data-index="5" data-url="https://templatemo.com/tm-609-crypto-vault">
+                    <img src="https://templatemo.com/thumbnails-360/tm-609-crypto-vault.jpg" alt="CryptoVault Template" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">TM-609</div>
+                        <h3 class="portfolio-title">CryptoVault</h3>
+                        <p class="portfolio-description">Crypto trading dashboard with Graphite &amp; Copper color scheme</p>
+                    </div>
+                </div>
+
+                <div class="coverflow-item" data-index="6" data-url="https://templatemo.com/tm-608-daynight-admin">
+                    <img src="https://templatemo.com/thumbnails-360/tm-608-daynight-admin.jpg" alt="DayNight Admin Template" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">TM-608</div>
+                        <h3 class="portfolio-title">DayNight Admin</h3>
+                        <p class="portfolio-description">Flat dashboard with dual theme — Snow Edition &amp; Carbon Edition</p>
+                    </div>
+                </div>
+
+                <div class="coverflow-item" data-index="7" data-url="https://templatemo.com/tm-607-glass-admin">
+                    <img src="https://templatemo.com/thumbnails-360/tm-607-glass-admin.jpg" alt="GlassDash Template" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">TM-607</div>
+                        <h3 class="portfolio-title">GlassDash</h3>
+                        <p class="portfolio-description">Glassmorphism admin dashboard with 3D tilt &amp; emerald-gold scheme</p>
+                    </div>
+                </div>
+
+                <div class="coverflow-item" data-index="8" data-url="https://templatemo.com/tm-606-string-master">
+                    <img src="https://templatemo.com/thumbnails-360/tm-606-string-master.jpg" alt="String Master Template" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">TM-606</div>
+                        <h3 class="portfolio-title">String Master</h3>
+                        <p class="portfolio-description">Interactive guitar learning platform for music educators</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="coverflow-controls">
+                <button class="control-btn" id="prevBtn">&#8249;</button>
+                <button class="control-btn" id="playPauseBtn">&#9654;</button>
+                <button class="control-btn" id="nextBtn">&#8250;</button>
+            </div>
+
+            <div class="indicators" id="indicators">
+                <div class="indicator active" data-index="0"></div>
+                <div class="indicator" data-index="1"></div>
+                <div class="indicator" data-index="2"></div>
+                <div class="indicator" data-index="3"></div>
+                <div class="indicator" data-index="4"></div>
+                <div class="indicator" data-index="5"></div>
+                <div class="indicator" data-index="6"></div>
+                <div class="indicator" data-index="7"></div>
+                <div class="indicator" data-index="8"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-inner">
+            <div class="about-left reveal">
+                <div class="about-metric-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">604+</div>
+                        <div class="metric-label">Free Templates</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">17+</div>
+                        <div class="metric-label">Years Online</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">100%</div>
+                        <div class="metric-label">Free to Use</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">0</div>
+                        <div class="metric-label">Signup Required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-right reveal">
+                <p class="section-eyebrow">About TemplateMo</p>
+                <h2>Free Templates <em>Since 2008</em></h2>
+                <p class="about-text">TemplateMo has been providing free HTML CSS website templates for over 17 years. Every template is 100% free to download — no email, no login, no hidden charges. Use them for learning, personal projects, or commercial websites.</p>
+                <p class="about-text">From responsive Bootstrap layouts to modern AI-customizable pure CSS designs, the collection spans every category: portfolios, business sites, landing pages, dashboards, and more.</p>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <div class="highlight-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
+                        No frameworks required — pure HTML, CSS &amp; JS
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
+                        Commercial &amp; personal use permitted
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
+                        AI-customizable templates with Claude &amp; ChatGPT
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
+                        Responsive &amp; mobile-friendly designs
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- CTA Section -->
+    <section class="cta" id="cta">
+        <div class="cta-inner reveal">
+            <p class="section-eyebrow">Get Started</p>
+            <h2>Download Your Next <em>Template</em> Today</h2>
+            <p class="cta-desc">Browse the full collection of 604+ free HTML CSS website templates. Find the perfect starting point for your next project — all free, all yours.</p>
+            <div class="cta-buttons">
+                <a href="https://templatemo.com/page/1" class="btn-primary" target="_blank" rel="noopener">
+                    Browse All Templates
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="https://templatemo.com/about" class="btn-secondary" target="_blank" rel="noopener">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 <a href="https://templatemo.com" target="_blank" rel="nofollow noopener">TemplateMo</a> &mdash; Free HTML CSS Website Templates Since 2008</p>
+    </footer>
+
+    <script>
+        // ─── 3D Coverflow Class (from Amber Folio) ───
+        class PhotoCoverflow {
+            constructor() {
+                this.items = document.querySelectorAll('.coverflow-item');
+                this.indicators = document.querySelectorAll('.indicator');
+                this.currentIndex = 4;
+                this.totalItems = this.items.length;
+                this.isPlaying = false;
+                this.autoPlayInterval = null;
+                this.autoPlaySpeed = 4000;
+                this.init();
+            }
+
+            init() {
+                this.updateCoverflow();
+                this.bindEvents();
+            }
+
+            bindEvents() {
+                document.getElementById('prevBtn').addEventListener('click', () => this.prev());
+                document.getElementById('nextBtn').addEventListener('click', () => this.next());
+                document.getElementById('playPauseBtn').addEventListener('click', () => this.toggleAutoPlay());
+
+                this.indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => this.goTo(index));
+                });
+
+                this.items.forEach((item, index) => {
+                    item.addEventListener('click', () => {
+                        if (index === this.currentIndex) {
+                            const url = item.getAttribute('data-url');
+                            if (url) window.open(url, '_blank', 'noopener');
+                        } else {
+                            this.goTo(index);
+                        }
+                    });
+                });
+
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') this.prev();
+                    if (e.key === 'ArrowRight') this.next();
+                    if (e.key === ' ') {
+                        e.preventDefault();
+                        this.toggleAutoPlay();
+                    }
+                });
+
+                let startX = 0;
+                let startY = 0;
+                const container = document.getElementById('coverflowContainer');
+
+                container.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                    startY = e.touches[0].clientY;
+                }, { passive: true });
+
+                container.addEventListener('touchend', (e) => {
+                    if (!startX || !startY) return;
+                    const endX = e.changedTouches[0].clientX;
+                    const endY = e.changedTouches[0].clientY;
+                    const diffX = startX - endX;
+                    const diffY = startY - endY;
+
+                    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+                        if (diffX > 0) this.next();
+                        else this.prev();
+                    }
+                    startX = 0;
+                    startY = 0;
+                }, { passive: true });
+
+                let resizeTimer;
+                window.addEventListener('resize', () => {
+                    clearTimeout(resizeTimer);
+                    resizeTimer = setTimeout(() => this.updateCoverflow(), 100);
+                });
+            }
+
+            updateCoverflow() {
+                const isMobile = window.innerWidth <= 768;
+                const isSmallMobile = window.innerWidth <= 480;
+                const viewportHeight = window.innerHeight;
+
+                let baseSpacing = 220;
+
+                if (viewportHeight > 900) baseSpacing = 250;
+                else if (viewportHeight < 768) baseSpacing = 180;
+
+                if (isSmallMobile) baseSpacing = Math.min(baseSpacing * 0.7, 140);
+                else if (isMobile) baseSpacing = Math.min(baseSpacing * 0.8, 170);
+
+                this.items.forEach((item, index) => {
+                    let offset = index - this.currentIndex;
+
+                    if (offset > this.totalItems / 2) offset -= this.totalItems;
+                    else if (offset < -this.totalItems / 2) offset += this.totalItems;
+
+                    let translateX = offset * baseSpacing;
+                    let translateZ = 0;
+                    let rotateY = 0;
+                    let scale = 1;
+                    let opacity = 1;
+
+                    if (offset === 0) {
+                        translateZ = 100;
+                        scale = 1.1;
+                    } else if (Math.abs(offset) === 1) {
+                        translateZ = 0;
+                        rotateY = offset * -40;
+                        scale = 0.85;
+                        opacity = 0.7;
+                    } else if (Math.abs(offset) === 2) {
+                        translateZ = -100;
+                        rotateY = offset * -50;
+                        scale = 0.7;
+                        opacity = 0.5;
+                    } else if (Math.abs(offset) === 3) {
+                        translateZ = -150;
+                        rotateY = offset * -60;
+                        scale = 0.6;
+                        opacity = 0.3;
+                    } else {
+                        translateZ = -200;
+                        rotateY = offset * -70;
+                        scale = 0.5;
+                        opacity = 0.2;
+                    }
+
+                    item.style.transform = `
+                        translate(-50%, -50%)
+                        translateX(${translateX}px)
+                        translateZ(${translateZ}px)
+                        rotateY(${rotateY}deg)
+                        scale(${scale})
+                    `;
+                    item.style.opacity = opacity;
+                    item.style.zIndex = this.totalItems - Math.abs(offset);
+                });
+
+                this.indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === this.currentIndex);
+                });
+            }
+
+            toggleAutoPlay() {
+                const playPauseBtn = document.getElementById('playPauseBtn');
+                if (this.isPlaying) {
+                    this.stopAutoPlay();
+                    playPauseBtn.innerHTML = '&#9654;';
+                    playPauseBtn.classList.remove('playing');
+                } else {
+                    this.startAutoPlay();
+                    playPauseBtn.innerHTML = '&#10074;&#10074;';
+                    playPauseBtn.classList.add('playing');
+                }
+            }
+
+            startAutoPlay() {
+                this.isPlaying = true;
+                this.autoPlayInterval = setInterval(() => this.next(), this.autoPlaySpeed);
+            }
+
+            stopAutoPlay() {
+                this.isPlaying = false;
+                if (this.autoPlayInterval) {
+                    clearInterval(this.autoPlayInterval);
+                    this.autoPlayInterval = null;
+                }
+            }
+
+            prev() {
+                this.currentIndex = (this.currentIndex - 1 + this.totalItems) % this.totalItems;
+                this.updateCoverflow();
+            }
+
+            next() {
+                this.currentIndex = (this.currentIndex + 1) % this.totalItems;
+                this.updateCoverflow();
+            }
+
+            goTo(index) {
+                this.currentIndex = index;
+                this.updateCoverflow();
+            }
+        }
+
+        // ─── Init ───
+        document.addEventListener('DOMContentLoaded', () => {
+            new PhotoCoverflow();
+
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                header.classList.toggle('compact', window.scrollY > 60);
+            }, { passive: true });
+
+            const revealEls = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            revealEls.forEach(el => revealObserver.observe(el));
+
+            // Safety fallback for iframe previews
+            setTimeout(() => {
+                revealEls.forEach(el => el.classList.add('visible'));
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

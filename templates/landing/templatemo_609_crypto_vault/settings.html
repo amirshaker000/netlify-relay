@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - CryptoVault</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/templatemo-crypto-style.css">
+    <link rel="stylesheet" href="css/templatemo-crypto-pages.css">
+    <!--
+
+TemplateMo 609 Crypto Vault
+
+https://templatemo.com/tm-609-crypto-vault
+
+-->
+</head>
+<body>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </button>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div class="dashboard">
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <div class="logo-icon">CV</div>
+                <span class="logo-text">CryptoVault</span>
+            </div>
+
+            <nav class="nav-section">
+                <div class="nav-label">Main Menu</div>
+                <a href="index.html" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7" rx="1"/>
+                        <rect x="14" y="3" width="7" height="7" rx="1"/>
+                        <rect x="3" y="14" width="7" height="7" rx="1"/>
+                        <rect x="14" y="14" width="7" height="7" rx="1"/>
+                    </svg>
+                    Dashboard
+                </a>
+                <a href="markets.html" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                    </svg>
+                    Markets
+                </a>
+                <a href="wallet.html" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                        <line x1="1" y1="10" x2="23" y2="10"/>
+                    </svg>
+                    Wallet
+                </a>
+            </nav>
+
+            <nav class="nav-section">
+                <div class="nav-label">Account</div>
+                <a href="settings.html" class="nav-item active">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
+                    </svg>
+                    Settings
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="theme-toggle">
+                    <div class="theme-toggle-label">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"/>
+                            <line x1="12" y1="1" x2="12" y2="3"/>
+                            <line x1="12" y1="21" x2="12" y2="23"/>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                            <line x1="1" y1="12" x2="3" y2="12"/>
+                            <line x1="21" y1="12" x2="23" y2="12"/>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                        Light Mode
+                    </div>
+                    <div class="theme-switch" id="themeSwitch"></div>
+                </div>
+                <button class="logout-btn" onclick="window.location.href='login.html'">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/>
+                        <polyline points="16 17 21 12 16 7"/>
+                        <line x1="21" y1="12" x2="9" y2="12"/>
+                    </svg>
+                    Logout
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="page-header">
+                <h1>Settings</h1>
+                <p>Manage your account preferences and security</p>
+            </div>
+
+            <!-- Settings Tabs -->
+            <div class="settings-tabs">
+                <button class="settings-tab active" data-tab="profile">Profile</button>
+                <button class="settings-tab" data-tab="security">Security</button>
+                <button class="settings-tab" data-tab="notifications">Notifications</button>
+                <button class="settings-tab" data-tab="preferences">Preferences</button>
+                <button class="settings-tab" data-tab="connected">Connected</button>
+            </div>
+
+            <!-- Profile Settings -->
+            <div class="settings-content active" id="profile">
+                <div class="card">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            AM
+                            <div class="avatar-edit">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+                                    <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                            <h2>Alex Morgan</h2>
+                            <p>alex.morgan@email.com</p>
+                            <span class="profile-badge">Pro Trader</span>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">First Name</label>
+                            <input type="text" class="form-input" value="Alex">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" class="form-input" value="Morgan">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-input" value="alex.morgan@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-input" value="+1 (555) 123-4567">
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label">Bio</label>
+                            <input type="text" class="form-input" placeholder="Tell us about yourself..." value="Crypto enthusiast and day trader since 2017">
+                        </div>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn primary">Save Changes</button>
+                        <button class="btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Settings -->
+            <div class="settings-content" id="security">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Security Settings</h3>
+                        <p class="card-description">Manage your account security and authentication methods</p>
+                    </div>
+
+                    <div class="security-item">
+                        <div class="security-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b87333" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <path d="M7 11V7a5 5 0 0110 0v4"/>
+                            </svg>
+                        </div>
+                        <div class="security-info">
+                            <div class="security-title">Password</div>
+                            <div class="security-status enabled">Last changed 30 days ago</div>
+                        </div>
+                        <button class="security-btn">Change Password</button>
+                    </div>
+
+                    <div class="security-item">
+                        <div class="security-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b87333" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </div>
+                        <div class="security-info">
+                            <div class="security-title">Two-Factor Authentication</div>
+                            <div class="security-status enabled">Enabled via Authenticator App</div>
+                        </div>
+                        <button class="security-btn">Manage</button>
+                    </div>
+
+                    <div class="security-item">
+                        <div class="security-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b87333" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <div class="security-info">
+                            <div class="security-title">Biometric Login</div>
+                            <div class="security-status disabled">Not configured</div>
+                        </div>
+                        <button class="security-btn primary">Enable</button>
+                    </div>
+
+                    <div class="security-item">
+                        <div class="security-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b87333" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <div class="security-info">
+                            <div class="security-title">Active Sessions</div>
+                            <div class="security-status enabled">3 devices currently logged in</div>
+                        </div>
+                        <button class="security-btn">View All</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Danger Zone</h3>
+                        <p class="card-description">Irreversible actions for your account</p>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn danger">Delete Account</button>
+                        <button class="btn danger">Export All Data</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notification Settings -->
+            <div class="settings-content" id="notifications">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Notification Preferences</h3>
+                        <p class="card-description">Choose how you want to receive updates</p>
+                    </div>
+
+                    <div class="toggle-item">
+                        <div class="toggle-info">
+                            <div class="toggle-title">Price Alerts</div>
+                            <div class="toggle-description">Get notified when prices hit your targets</div>
+                        </div>
+                        <div class="toggle-switch active"></div>
+                    </div>
+
+                    <div class="toggle-item">
+                        <div class="toggle-info">
+                            <div class="toggle-title">Transaction Updates</div>
+                            <div class="toggle-description">Receive alerts for deposits, withdrawals, and trades</div>
+                        </div>
+                        <div class="toggle-switch active"></div>
+                    </div>
+
+                    <div class="toggle-item">
+                        <div class="toggle-info">
+                            <div class="toggle-title">Security Alerts</div>
+                            <div class="toggle-description">Important security notifications and login alerts</div>
+                        </div>
+                        <div class="toggle-switch active"></div>
+                    </div>
+
+                    <div class="toggle-item">
+                        <div class="toggle-info">
+                            <div class="toggle-title">Marketing Emails</div>
+                            <div class="toggle-description">News, updates, and promotional offers</div>
+                        </div>
+                        <div class="toggle-switch"></div>
+                    </div>
+
+                    <div class="toggle-item">
+                        <div class="toggle-info">
+                            <div class="toggle-title">Weekly Report</div>
+                            <div class="toggle-description">Portfolio performance summary every week</div>
+                        </div>
+                        <div class="toggle-switch active"></div>
+                    </div>
+
+                    <div class="toggle-item">
+                        <div class="toggle-info">
+                            <div class="toggle-title">Push Notifications</div>
+                            <div class="toggle-description">Enable browser push notifications</div>
+                        </div>
+                        <div class="toggle-switch"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preferences Settings -->
+            <div class="settings-content" id="preferences">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Display Preferences</h3>
+                        <p class="card-description">Customize how the app looks and behaves</p>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Currency</label>
+                            <select class="form-select">
+                                <option value="usd" selected>USD - US Dollar</option>
+                                <option value="eur">EUR - Euro</option>
+                                <option value="gbp">GBP - British Pound</option>
+                                <option value="jpy">JPY - Japanese Yen</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Language</label>
+                            <select class="form-select">
+                                <option value="en" selected>English</option>
+                                <option value="es">Spanish</option>
+                                <option value="fr">French</option>
+                                <option value="de">German</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Timezone</label>
+                            <select class="form-select">
+                                <option value="est" selected>Eastern Time (ET)</option>
+                                <option value="pst">Pacific Time (PT)</option>
+                                <option value="utc">UTC</option>
+                                <option value="gmt">GMT</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Date Format</label>
+                            <select class="form-select">
+                                <option value="mdy" selected>MM/DD/YYYY</option>
+                                <option value="dmy">DD/MM/YYYY</option>
+                                <option value="ymd">YYYY-MM-DD</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="toggle-item">
+                        <div class="toggle-info">
+                            <div class="toggle-title">Dark Mode</div>
+                            <div class="toggle-description">Use dark theme for the interface</div>
+                        </div>
+                        <div class="toggle-switch active" id="darkModeToggle"></div>
+                    </div>
+
+                    <div class="toggle-item">
+                        <div class="toggle-info">
+                            <div class="toggle-title">Compact View</div>
+                            <div class="toggle-description">Show more data with smaller elements</div>
+                        </div>
+                        <div class="toggle-switch"></div>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn primary">Save Preferences</button>
+                        <button class="btn">Reset to Default</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Connected Accounts -->
+            <div class="settings-content" id="connected">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Connected Exchanges</h3>
+                        <p class="card-description">Link your exchange accounts for seamless trading</p>
+                    </div>
+
+                    <div class="connected-item">
+                        <div class="connected-icon metamask">🦊</div>
+                        <div class="connected-info">
+                            <div class="connected-name">MetaMask</div>
+                            <div class="connected-status">Connected • 0x742d...5f83</div>
+                        </div>
+                        <button class="security-btn">Disconnect</button>
+                    </div>
+
+                    <div class="connected-item">
+                        <div class="connected-icon coinbase">C</div>
+                        <div class="connected-info">
+                            <div class="connected-name">Coinbase</div>
+                            <div class="connected-status">Connected • alex.m@email.com</div>
+                        </div>
+                        <button class="security-btn">Disconnect</button>
+                    </div>
+
+                    <div class="connected-item">
+                        <div class="connected-icon binance">B</div>
+                        <div class="connected-info">
+                            <div class="connected-name">Binance</div>
+                            <div class="connected-status disconnected">Not connected</div>
+                        </div>
+                        <button class="security-btn primary">Connect</button>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn primary">+ Add Exchange</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">API Keys</h3>
+                        <p class="card-description">Manage your API access for third-party integrations</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">API Key</label>
+                        <input type="text" class="form-input" value="cv_live_xxxxxxxxxxxxxxxxxxxxxxxx" readonly>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn">Regenerate Key</button>
+                        <button class="btn">View Documentation</button>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="copyright">
+                Copyright &copy; 2026 CryptoVault. Designed by <a href="https://templatemo.com" target="_blank" rel="nofollow">TemplateMo</a>
+            </footer>
+        </main>
+    </div>
+
+    <script src="js/templatemo-crypto-script.js"></script>
+</body>
+</html>

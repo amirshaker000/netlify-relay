@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free CSS Templates - TemplateMo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold-primary: #B8860B;
+            --gold-light: #D4A84B;
+            --gold-dark: #8B6914;
+            --gold-accent: #C9A227;
+            --bg-dark: #0F0E0C;
+            --bg-card: #1A1815;
+            --bg-card-hover: #252119;
+            --text-primary: #F5F0E8;
+            --text-secondary: #A69F94;
+            --text-muted: #6B6560;
+            --border-color: #2A2622;
+            --success: #4A7C59;
+            --danger: #8B3A3A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Libre Franklin', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-weight: 300;
+            overflow-x: hidden;
+        }
+
+        /* Noise texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.03;
+            z-index: 9999;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 0;
+            background: rgba(15, 14, 12, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: 0.08em;
+            text-transform: none;
+        }
+
+        .logo span {
+            color: var(--gold-light);
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            position: relative;
+            padding: 8px 0;
+            transition: color 0.4s ease;
+        }
+
+        .nav-links a::before {
+            content: '―';
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gold-primary);
+            font-size: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease, left 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--gold-light);
+        }
+
+        .nav-links a:hover::before,
+        .nav-links a.active::before {
+            opacity: 1;
+            left: -16px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Libre Franklin', sans-serif;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-dark) 100%);
+            color: var(--bg-dark);
+            border: 1px solid var(--gold-light);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(184, 134, 11, 0.3);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            background: none;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            padding: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-btn:hover {
+            border-color: var(--gold-primary);
+        }
+
+        .mobile-menu-btn span {
+            width: 20px;
+            height: 1.5px;
+            background: var(--gold-light);
+            transition: all 0.3s ease;
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            max-width: 400px;
+            height: 100vh;
+            background: var(--bg-card);
+            z-index: 2000;
+            padding: 100px 40px 40px;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-left: 1px solid var(--border-color);
+            overflow-y: auto;
+        }
+
+        .mobile-menu.open {
+            right: 0;
+        }
+
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+
+        .mobile-menu-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            width: 48px;
+            height: 48px;
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-close:hover {
+            border-color: var(--gold-primary);
+            color: var(--gold-light);
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .mobile-nav-links li {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-nav-links a {
+            display: block;
+            padding: 20px 0;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            color: var(--text-secondary);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .mobile-nav-links a::after {
+            content: '→';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%) translateX(-10px);
+            opacity: 0;
+            color: var(--gold-primary);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-links a:hover,
+        .mobile-nav-links a.active {
+            color: var(--gold-light);
+            padding-left: 12px;
+        }
+
+        .mobile-nav-links a:hover::after,
+        .mobile-nav-links a.active::after {
+            opacity: 1;
+            transform: translateY(-50%) translateX(0);
+        }
+
+        .mobile-menu-cta {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .mobile-menu-cta .btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Hide body scroll when menu open */
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 160px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120%;
+            height: 100%;
+            background: radial-gradient(ellipse at center top, rgba(184, 134, 11, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .page-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--gold-primary);
+            margin-bottom: 16px;
+        }
+
+        .page-title {
+            font-size: clamp(36px, 5vw, 56px);
+            color: var(--text-primary);
+            margin-bottom: 20px;
+        }
+
+        .page-title .gold {
+            color: var(--gold-light);
+            font-style: italic;
+        }
+
+        .page-desc {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Templates Section */
+        .templates-section {
+            padding: 40px 0 120px;
+        }
+
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .template-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .template-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gold-primary);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+            z-index: 1;
+        }
+
+        .template-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold-dark);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .template-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .template-image {
+            aspect-ratio: 1;
+            overflow: hidden;
+            position: relative;
+            background: var(--bg-dark);
+        }
+
+        .template-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .template-card:hover .template-image img {
+            transform: scale(1.05);
+        }
+
+        .template-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(15, 14, 12, 0.9) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .template-card:hover .template-overlay {
+            opacity: 1;
+        }
+
+        .template-overlay .btn {
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+
+        .template-card:hover .template-overlay .btn {
+            transform: translateY(0);
+        }
+
+        .template-info {
+            padding: 24px;
+        }
+
+        .template-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 14px;
+            color: var(--gold-dark);
+            margin-bottom: 8px;
+            letter-spacing: 0.1em;
+        }
+
+        .template-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            transition: color 0.3s ease;
+        }
+
+        .template-card:hover .template-name {
+            color: var(--gold-light);
+        }
+
+        .template-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* View More Link */
+        .view-more {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .view-more-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            padding: 16px 0;
+            border-bottom: 1px solid var(--gold-dark);
+            transition: all 0.3s ease;
+        }
+
+        .view-more-link:hover {
+            color: var(--text-primary);
+            border-color: var(--gold-light);
+            gap: 20px;
+        }
+
+        .view-more-link svg {
+            transition: transform 0.3s ease;
+        }
+
+        .view-more-link:hover svg {
+            transform: translateX(4px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-card);
+            padding: 60px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-copy {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .footer-copy a {
+            color: var(--gold-light);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .footer-links a {
+            font-size: 13px;
+            color: var(--text-secondary);
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .templates-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .nav-links,
+            .nav-cta-btn {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .templates-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .templates-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .page-header {
+                padding: 120px 0 60px;
+            }
+
+            .template-info {
+                padding: 20px;
+            }
+
+            .template-name {
+                font-size: 22px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="https://templatemo.com" target="_blank" class="logo">Template<span>Mo</span></a>
+                <ul class="nav-links">
+                    <li><a href="https://templatemo.com" target="_blank">Home</a></li>
+                    <li><a href="https://templatemo.com/page/1" target="_blank" class="active">Templates</a></li>
+                    <li><a href="https://templatemo.com/about" target="_blank">About</a></li>
+                    <li><a href="https://templatemo.com/contact" target="_blank">Contact</a></li>
+                </ul>
+                <a href="https://templatemo.com" target="_blank" class="btn btn-primary nav-cta-btn">Visit TemplateMo</a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close Menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <ul class="mobile-nav-links">
+            <li><a href="https://templatemo.com" target="_blank">Home</a></li>
+            <li><a href="https://templatemo.com/page/1" target="_blank" class="active">Templates</a></li>
+            <li><a href="https://templatemo.com/about" target="_blank">About</a></li>
+            <li><a href="https://templatemo.com/contact" target="_blank">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-cta">
+            <a href="https://templatemo.com" target="_blank" class="btn btn-primary">Visit TemplateMo</a>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-label">Free Resources</div>
+            <h1 class="page-title">Premium <span class="gold">Templates</span></h1>
+            <p class="page-desc">Discover beautifully crafted, free website templates from TemplateMo. Perfect for your next project.</p>
+        </div>
+    </section>
+
+    <!-- Templates Section -->
+    <section class="templates-section">
+        <div class="container">
+            <div class="templates-grid">
+                <a href="https://templatemo.com/tm-609-crypto-vault" target="_blank" class="template-card">
+                    <div class="template-image">
+                        <img src="https://templatemo.com/thumbnails-360/tm-609-crypto-vault.jpg" alt="Crypto Vault Template">
+                        <div class="template-overlay">
+                            <span class="btn btn-primary">View Template</span>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <div class="template-number">No. 609</div>
+                        <h3 class="template-name">Crypto Vault</h3>
+                        <p class="template-desc">A modern cryptocurrency platform template with dark cyberpunk aesthetics, live price tickers, and glassmorphism effects.</p>
+                    </div>
+                </a>
+
+                <a href="https://templatemo.com/tm-608-daynight-admin" target="_blank" class="template-card">
+                    <div class="template-image">
+                        <img src="https://templatemo.com/thumbnails-360/tm-608-daynight-admin.jpg" alt="Daynight Admin Template">
+                        <div class="template-overlay">
+                            <span class="btn btn-primary">View Template</span>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <div class="template-number">No. 608</div>
+                        <h3 class="template-name">Daynight Admin</h3>
+                        <p class="template-desc">A clean, flat dashboard template featuring dual theme modes - Snow Edition (light) and Carbon Edition (dark).</p>
+                    </div>
+                </a>
+
+                <a href="https://templatemo.com/tm-607-glass-admin" target="_blank" class="template-card">
+                    <div class="template-image">
+                        <img src="https://templatemo.com/thumbnails-360/tm-607-glass-admin.jpg" alt="Glass Admin Template">
+                        <div class="template-overlay">
+                            <span class="btn btn-primary">View Template</span>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <div class="template-number">No. 607</div>
+                        <h3 class="template-name">Glass Admin</h3>
+                        <p class="template-desc">A modern admin dashboard template featuring stunning glassmorphism effects and 3D tilt animations.</p>
+                    </div>
+                </a>
+
+                <a href="https://templatemo.com/tm-606-string-master" target="_blank" class="template-card">
+                    <div class="template-image">
+                        <img src="https://templatemo.com/thumbnails-360/tm-606-string-master.jpg" alt="String Master Template">
+                        <div class="template-overlay">
+                            <span class="btn btn-primary">View Template</span>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <div class="template-number">No. 606</div>
+                        <h3 class="template-name">String Master</h3>
+                        <p class="template-desc">A modern, interactive guitar learning platform template designed for music educators and online instructors.</p>
+                    </div>
+                </a>
+
+                <a href="https://templatemo.com/tm-605-xmas-countdown" target="_blank" class="template-card">
+                    <div class="template-image">
+                        <img src="https://templatemo.com/thumbnails-360/tm-605-xmas-countdown.jpg" alt="Xmas Countdown Template">
+                        <div class="template-overlay">
+                            <span class="btn btn-primary">View Template</span>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <div class="template-number">No. 605</div>
+                        <h3 class="template-name">Xmas Countdown</h3>
+                        <p class="template-desc">A modern Christmas countdown template featuring a sleek glassmorphism design with a dark tech aesthetic.</p>
+                    </div>
+                </a>
+
+                <a href="https://templatemo.com/tm-604-christmas-piano" target="_blank" class="template-card">
+                    <div class="template-image">
+                        <img src="https://templatemo.com/thumbnails-360/tm-604-christmas-piano.jpg" alt="Christmas Piano Template">
+                        <div class="template-overlay">
+                            <span class="btn btn-primary">View Template</span>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <div class="template-number">No. 604</div>
+                        <h3 class="template-name">Christmas Piano</h3>
+                        <p class="template-desc">A festive single-page website template featuring an interactive mini piano player built with Web Audio API.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="view-more">
+                <a href="https://templatemo.com/page/1" target="_blank" class="view-more-link">
+                    Browse All 600+ Templates
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <p class="footer-copy">&copy; 2026 <a href="https://templatemo.com" target="_blank">TemplateMo</a> - Free CSS Templates Since 2008</p>
+                <div class="footer-links">
+                    <a href="https://templatemo.com" target="_blank">Home</a>
+                    <a href="https://templatemo.com/page/1" target="_blank">Templates</a>
+                    <a href="https://www.tooplate.com" target="_blank">Tooplate</a>
+                    <a href="https://templatemo.com/contact" target="_blank">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            mobileMenuOverlay.classList.add('open');
+            mobileMenuBtn.classList.add('active');
+            document.body.classList.add('menu-open');
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            mobileMenuOverlay.classList.remove('open');
+            mobileMenuBtn.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMobileMenu();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markets - CryptoVault</title>
+    <script>
+        // Load theme immediately to prevent flash
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/templatemo-crypto-style.css">
+    <link rel="stylesheet" href="css/templatemo-crypto-pages.css">
+    <!--
+
+TemplateMo 609 Crypto Vault
+
+https://templatemo.com/tm-609-crypto-vault
+
+-->
+</head>
+<body>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </button>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div class="dashboard">
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <div class="logo-icon">CV</div>
+                <span class="logo-text">CryptoVault</span>
+            </div>
+
+            <nav class="nav-section">
+                <div class="nav-label">Main Menu</div>
+                <a href="index.html" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7" rx="1"/>
+                        <rect x="14" y="3" width="7" height="7" rx="1"/>
+                        <rect x="3" y="14" width="7" height="7" rx="1"/>
+                        <rect x="14" y="14" width="7" height="7" rx="1"/>
+                    </svg>
+                    Dashboard
+                </a>
+                <a href="markets.html" class="nav-item active">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                    </svg>
+                    Markets
+                </a>
+                <a href="wallet.html" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                        <line x1="1" y1="10" x2="23" y2="10"/>
+                    </svg>
+                    Wallet
+                </a>
+            </nav>
+
+            <nav class="nav-section">
+                <div class="nav-label">Account</div>
+                <a href="settings.html" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
+                    </svg>
+                    Settings
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="theme-toggle">
+                    <div class="theme-toggle-label">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"/>
+                            <line x1="12" y1="1" x2="12" y2="3"/>
+                            <line x1="12" y1="21" x2="12" y2="23"/>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                            <line x1="1" y1="12" x2="3" y2="12"/>
+                            <line x1="21" y1="12" x2="23" y2="12"/>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                        Light Mode
+                    </div>
+                    <div class="theme-switch" id="themeSwitch"></div>
+                </div>
+                <button class="logout-btn" onclick="window.location.href='login.html'">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/>
+                        <polyline points="16 17 21 12 16 7"/>
+                        <line x1="21" y1="12" x2="9" y2="12"/>
+                    </svg>
+                    Logout
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="page-header">
+                <h1>Markets</h1>
+                <p>Live cryptocurrency prices and market data</p>
+            </div>
+
+            <!-- Market Stats -->
+            <div class="market-stats">
+                <div class="market-stat">
+                    <div class="market-stat-label">Total Market Cap</div>
+                    <div class="market-stat-value">$2.48T</div>
+                    <div class="market-stat-change positive">+2.4%</div>
+                </div>
+                <div class="market-stat">
+                    <div class="market-stat-label">24h Volume</div>
+                    <div class="market-stat-value">$84.2B</div>
+                    <div class="market-stat-change positive">+5.8%</div>
+                </div>
+                <div class="market-stat">
+                    <div class="market-stat-label">BTC Dominance</div>
+                    <div class="market-stat-value">52.4%</div>
+                    <div class="market-stat-change negative">-0.3%</div>
+                </div>
+                <div class="market-stat">
+                    <div class="market-stat-label">Active Cryptos</div>
+                    <div class="market-stat-value">12,847</div>
+                    <div class="market-stat-change positive">+24</div>
+                </div>
+            </div>
+
+            <!-- Search and Filters -->
+            <div class="search-filters">
+                <div class="search-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    </svg>
+                    <input type="text" placeholder="Search coins..." id="searchInput">
+                </div>
+                <div class="filter-tabs">
+                    <button class="filter-tab active">All</button>
+                    <button class="filter-tab">Favorites</button>
+                    <button class="filter-tab">DeFi</button>
+                    <button class="filter-tab">NFT</button>
+                    <button class="filter-tab">Layer 1</button>
+                </div>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="content-grid">
+                <!-- Market Table -->
+                <div class="card">
+                    <table class="market-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Coin</th>
+                                <th class="text-right">Price</th>
+                                <th class="text-right">24h %</th>
+                                <th class="text-right">Volume</th>
+                                <th class="text-right">Market Cap</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="coin-rank">1</span></td>
+                                <td>
+                                    <div class="coin-cell">
+                                        <div class="coin-icon btc">₿</div>
+                                        <div>
+                                            <div class="coin-name">Bitcoin</div>
+                                            <div class="coin-symbol">BTC</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="price-cell">$43,256.00</td>
+                                <td class="change-cell positive">+2.34%</td>
+                                <td class="volume-cell">$28.4B</td>
+                                <td class="mcap-cell">$847.2B</td>
+                                <td><button class="star-btn active">★</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="coin-rank">2</span></td>
+                                <td>
+                                    <div class="coin-cell">
+                                        <div class="coin-icon eth">Ξ</div>
+                                        <div>
+                                            <div class="coin-name">Ethereum</div>
+                                            <div class="coin-symbol">ETH</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="price-cell">$2,284.50</td>
+                                <td class="change-cell positive">+1.87%</td>
+                                <td class="volume-cell">$12.8B</td>
+                                <td class="mcap-cell">$274.5B</td>
+                                <td><button class="star-btn active">★</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="coin-rank">3</span></td>
+                                <td>
+                                    <div class="coin-cell">
+                                        <div class="coin-icon usdt">₮</div>
+                                        <div>
+                                            <div class="coin-name">Tether</div>
+                                            <div class="coin-symbol">USDT</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="price-cell">$1.00</td>
+                                <td class="change-cell positive">+0.01%</td>
+                                <td class="volume-cell">$45.2B</td>
+                                <td class="mcap-cell">$95.8B</td>
+                                <td><button class="star-btn">☆</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="coin-rank">4</span></td>
+                                <td>
+                                    <div class="coin-cell">
+                                        <div class="coin-icon bnb">B</div>
+                                        <div>
+                                            <div class="coin-name">BNB</div>
+                                            <div class="coin-symbol">BNB</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="price-cell">$312.45</td>
+                                <td class="change-cell negative">-0.82%</td>
+                                <td class="volume-cell">$842M</td>
+                                <td class="mcap-cell">$48.2B</td>
+                                <td><button class="star-btn">☆</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="coin-rank">5</span></td>
+                                <td>
+                                    <div class="coin-cell">
+                                        <div class="coin-icon sol">◎</div>
+                                        <div>
+                                            <div class="coin-name">Solana</div>
+                                            <div class="coin-symbol">SOL</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="price-cell">$98.42</td>
+                                <td class="change-cell positive">+5.67%</td>
+                                <td class="volume-cell">$2.4B</td>
+                                <td class="mcap-cell">$42.8B</td>
+                                <td><button class="star-btn active">★</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="coin-rank">6</span></td>
+                                <td>
+                                    <div class="coin-cell">
+                                        <div class="coin-icon xrp">✕</div>
+                                        <div>
+                                            <div class="coin-name">XRP</div>
+                                            <div class="coin-symbol">XRP</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="price-cell">$0.62</td>
+                                <td class="change-cell negative">-1.24%</td>
+                                <td class="volume-cell">$1.2B</td>
+                                <td class="mcap-cell">$33.8B</td>
+                                <td><button class="star-btn">☆</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="coin-rank">7</span></td>
+                                <td>
+                                    <div class="coin-cell">
+                                        <div class="coin-icon ada">₳</div>
+                                        <div>
+                                            <div class="coin-name">Cardano</div>
+                                            <div class="coin-symbol">ADA</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="price-cell">$0.52</td>
+                                <td class="change-cell positive">+3.12%</td>
+                                <td class="volume-cell">$428M</td>
+                                <td class="mcap-cell">$18.4B</td>
+                                <td><button class="star-btn">☆</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="coin-rank">8</span></td>
+                                <td>
+                                    <div class="coin-cell">
+                                        <div class="coin-icon doge">Ð</div>
+                                        <div>
+                                            <div class="coin-name">Dogecoin</div>
+                                            <div class="coin-symbol">DOGE</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="price-cell">$0.082</td>
+                                <td class="change-cell positive">+8.45%</td>
+                                <td class="volume-cell">$892M</td>
+                                <td class="mcap-cell">$11.6B</td>
+                                <td><button class="star-btn">☆</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="coin-rank">9</span></td>
+                                <td>
+                                    <div class="coin-cell">
+                                        <div class="coin-icon dot">●</div>
+                                        <div>
+                                            <div class="coin-name">Polkadot</div>
+                                            <div class="coin-symbol">DOT</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="price-cell">$7.45</td>
+                                <td class="change-cell positive">+4.21%</td>
+                                <td class="volume-cell">$312M</td>
+                                <td class="mcap-cell">$9.8B</td>
+                                <td><button class="star-btn">☆</button></td>
+                            </tr>
+                            <tr>
+                                <td><span class="coin-rank">10</span></td>
+                                <td>
+                                    <div class="coin-cell">
+                                        <div class="coin-icon matic">M</div>
+                                        <div>
+                                            <div class="coin-name">Polygon</div>
+                                            <div class="coin-symbol">MATIC</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="price-cell">$0.89</td>
+                                <td class="change-cell negative">-2.15%</td>
+                                <td class="volume-cell">$524M</td>
+                                <td class="mcap-cell">$8.2B</td>
+                                <td><button class="star-btn">☆</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Right Column -->
+                <div>
+                    <!-- Trending -->
+                    <div class="card" style="margin-bottom: 24px;">
+                        <div class="card-header">
+                            <h3 class="card-title">🔥 Trending</h3>
+                        </div>
+                        <div class="trending-list">
+                            <div class="trending-item">
+                                <div class="trending-rank">1</div>
+                                <div class="trending-coin">
+                                    <div class="trending-icon" style="background: linear-gradient(135deg, #c3a634, #ba9f33);">Ð</div>
+                                    <div>
+                                        <div class="trending-name">Dogecoin</div>
+                                        <div class="trending-symbol">DOGE</div>
+                                    </div>
+                                </div>
+                                <div class="trending-change positive">+8.45%</div>
+                            </div>
+                            <div class="trending-item">
+                                <div class="trending-rank">2</div>
+                                <div class="trending-coin">
+                                    <div class="trending-icon" style="background: linear-gradient(135deg, #9945ff, #14f195);">◎</div>
+                                    <div>
+                                        <div class="trending-name">Solana</div>
+                                        <div class="trending-symbol">SOL</div>
+                                    </div>
+                                </div>
+                                <div class="trending-change positive">+5.67%</div>
+                            </div>
+                            <div class="trending-item">
+                                <div class="trending-rank">3</div>
+                                <div class="trending-coin">
+                                    <div class="trending-icon" style="background: linear-gradient(135deg, #e6007a, #c40068);">●</div>
+                                    <div>
+                                        <div class="trending-name">Polkadot</div>
+                                        <div class="trending-symbol">DOT</div>
+                                    </div>
+                                </div>
+                                <div class="trending-change positive">+4.21%</div>
+                            </div>
+                            <div class="trending-item">
+                                <div class="trending-rank">4</div>
+                                <div class="trending-coin">
+                                    <div class="trending-icon" style="background: linear-gradient(135deg, #0033ad, #002276);">₳</div>
+                                    <div>
+                                        <div class="trending-name">Cardano</div>
+                                        <div class="trending-symbol">ADA</div>
+                                    </div>
+                                </div>
+                                <div class="trending-change positive">+3.12%</div>
+                            </div>
+                            <div class="trending-item">
+                                <div class="trending-rank">5</div>
+                                <div class="trending-coin">
+                                    <div class="trending-icon" style="background: linear-gradient(135deg, #f7931a, #c77b15);">₿</div>
+                                    <div>
+                                        <div class="trending-name">Bitcoin</div>
+                                        <div class="trending-symbol">BTC</div>
+                                    </div>
+                                </div>
+                                <div class="trending-change positive">+2.34%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fear & Greed Index -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Fear & Greed Index</h3>
+                        </div>
+                        <div class="fear-greed">
+                            <div class="fear-greed-meter">
+                                <div class="fear-greed-indicator" style="left: 68%;"></div>
+                            </div>
+                            <div class="fear-greed-labels">
+                                <span>Extreme Fear</span>
+                                <span>Neutral</span>
+                                <span>Extreme Greed</span>
+                            </div>
+                            <div class="fear-greed-value">
+                                <div class="fear-greed-number">68</div>
+                                <div class="fear-greed-label">Greed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="copyright">
+                Copyright &copy; 2026 CryptoVault. Designed by <a href="https://templatemo.com" target="_blank" rel="nofollow">TemplateMo</a>
+            </footer>
+        </main>
+    </div>
+
+    <script src="js/templatemo-crypto-script.js"></script>
+</body>
+</html>

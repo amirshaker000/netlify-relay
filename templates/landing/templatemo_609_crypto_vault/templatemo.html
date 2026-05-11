@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TemplateMo - Free CSS Website Templates</title>
+    <script>
+        // Load theme immediately to prevent flash
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/templatemo-crypto-style.css">
+    <!--
+
+TemplateMo 609 Crypto Vault
+
+https://templatemo.com/tm-609-crypto-vault
+
+-->
+    <style>
+        .templatemo-page {
+            min-height: 100vh;
+            background: var(--bg-primary);
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle-btn {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            color: var(--text-primary);
+        }
+
+        .theme-toggle-btn:hover {
+            background: var(--bg-secondary);
+            border-color: var(--accent-copper);
+            transform: rotate(180deg);
+        }
+
+        .theme-toggle-btn svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .templatemo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .templatemo-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .templatemo-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .templatemo-logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: #1c1c1e;
+        }
+
+        .templatemo-logo-text {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .templatemo-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .templatemo-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .templatemo-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Templates Grid */
+        .templates-section {
+            margin-bottom: 80px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .view-all-link {
+            color: var(--accent-copper);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .view-all-link:hover {
+            color: var(--accent-copper-light);
+            gap: 10px;
+        }
+
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .template-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .template-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-copper);
+            box-shadow: 0 8px 24px rgba(184, 115, 51, 0.15);
+        }
+
+        .template-thumbnail {
+            width: 100%;
+            aspect-ratio: 3 / 2;
+            overflow: hidden;
+            background: var(--bg-secondary);
+            position: relative;
+        }
+
+        .template-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+			object-position: top;
+            transition: transform 0.3s ease;
+        }
+
+        .template-card:hover .template-thumbnail img {
+            transform: scale(1.05);
+        }
+
+        .template-info {
+            padding: 20px;
+        }
+
+        .template-number {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent-copper);
+            margin-bottom: 8px;
+        }
+
+        .template-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .template-description {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* About Section */
+        .about-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 48px;
+            margin-bottom: 40px;
+        }
+
+        .about-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .about-text {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .about-text p {
+            margin-bottom: 16px;
+        }
+
+        .about-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .about-features {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(184, 115, 51, 0.15);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--accent-copper);
+        }
+
+        .feature-content h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .feature-content p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .templatemo-footer {
+            text-align: center;
+            padding: 32px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .templatemo-footer p {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .templatemo-footer a {
+            color: var(--accent-copper);
+            text-decoration: none;
+        }
+
+        .templatemo-footer a:hover {
+            color: var(--accent-copper-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .templates-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .templatemo-page {
+                padding: 24px 16px;
+            }
+
+            .templatemo-title {
+                font-size: 32px;
+            }
+
+            .templates-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .about-section {
+                padding: 32px 24px;
+            }
+
+            .about-title {
+                font-size: 24px;
+            }
+
+            .templatemo-stats {
+                gap: 24px;
+            }
+
+            .theme-toggle-btn {
+                top: 16px;
+                right: 16px;
+                width: 44px;
+                height: 44px;
+            }
+
+            .theme-toggle-btn svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle theme">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+    </button>
+
+    <div class="templatemo-page">
+        <div class="templatemo-container">
+            <!-- Header -->
+            <header class="templatemo-header">
+                <div class="templatemo-logo">
+                    <div class="templatemo-logo-icon">TM</div>
+                    <span class="templatemo-logo-text">TemplateMo</span>
+                </div>
+                <h1 class="templatemo-title">Free CSS Website Templates</h1>
+                <p class="templatemo-subtitle">Professional, responsive HTML templates for your next project</p>
+                <div class="templatemo-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">604+</div>
+                        <div class="stat-label">Free Templates</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">Since 2008</div>
+                        <div class="stat-label">Serving Developers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Free to Use</div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Latest Templates -->
+            <section class="templates-section">
+                <div class="section-header">
+                    <h2 class="section-title">Latest Templates</h2>
+                    <a href="https://templatemo.com/page/1" target="_blank" class="view-all-link">
+                        View All Templates
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="templates-grid">
+                    <!-- Template 608 -->
+                    <a href="https://templatemo.com/tm-608-daynight-admin" target="_blank" class="template-card">
+                        <div class="template-thumbnail">
+                            <img src="https://templatemo.com/thumbnails-360/tm-608-daynight-admin.jpg" alt="Daynight Admin Template">
+                        </div>
+                        <div class="template-info">
+                            <div class="template-number">Template #608</div>
+                            <h3 class="template-name">Daynight Admin</h3>
+                            <p class="template-description">DayNight Admin is a clean, flat dashboard template featuring dual theme modes - Snow Edition (light) and Carbon Edition (dark).</p>
+                        </div>
+                    </a>
+
+                    <!-- Template 607 -->
+                    <a href="https://templatemo.com/tm-607-glass-admin" target="_blank" class="template-card">
+                        <div class="template-thumbnail">
+                            <img src="https://templatemo.com/thumbnails-360/tm-607-glass-admin.jpg" alt="Glass Admin Template">
+                        </div>
+                        <div class="template-info">
+                            <div class="template-number">Template #607</div>
+                            <h3 class="template-name">Glass Admin</h3>
+                            <p class="template-description">GlassDash is a modern admin dashboard template featuring stunning glassmorphism effects and 3D tilt animations.</p>
+                        </div>
+                    </a>
+
+                    <!-- Template 606 -->
+                    <a href="https://templatemo.com/tm-606-string-master" target="_blank" class="template-card">
+                        <div class="template-thumbnail">
+                            <img src="https://templatemo.com/thumbnails-360/tm-606-string-master.jpg" alt="String Master Template">
+                        </div>
+                        <div class="template-info">
+                            <div class="template-number">Template #606</div>
+                            <h3 class="template-name">String Master</h3>
+                            <p class="template-description">String Master is a modern, interactive guitar learning platform template designed for music educators and online instructors.</p>
+                        </div>
+                    </a>
+
+                    <!-- Template 605 -->
+                    <a href="https://templatemo.com/tm-605-xmas-countdown" target="_blank" class="template-card">
+                        <div class="template-thumbnail">
+                            <img src="https://templatemo.com/thumbnails-360/tm-605-xmas-countdown.jpg" alt="Xmas Countdown Template">
+                        </div>
+                        <div class="template-info">
+                            <div class="template-number">Template #605</div>
+                            <h3 class="template-name">Xmas Countdown</h3>
+                            <p class="template-description">Xmas Countdown is a modern Christmas countdown template featuring a sleek glassmorphism design with a dark tech aesthetic.</p>
+                        </div>
+                    </a>
+
+                    <!-- Template 604 -->
+                    <a href="https://templatemo.com/tm-604-christmas-piano" target="_blank" class="template-card">
+                        <div class="template-thumbnail">
+                            <img src="https://templatemo.com/thumbnails-360/tm-604-christmas-piano.jpg" alt="Christmas Piano Template">
+                        </div>
+                        <div class="template-info">
+                            <div class="template-number">Template #604</div>
+                            <h3 class="template-name">Christmas Piano</h3>
+                            <p class="template-description">Christmas Piano is a festive single-page website template featuring an interactive mini piano player built with Web Audio API.</p>
+                        </div>
+                    </a>
+
+                    <!-- Template 603 -->
+                    <a href="https://templatemo.com/tm-603-nexaverse" target="_blank" class="template-card">
+                        <div class="template-thumbnail">
+                            <img src="https://templatemo.com/thumbnails-360/tm-603-nexaverse.jpg" alt="Nexaverse Template">
+                        </div>
+                        <div class="template-info">
+                            <div class="template-number">Template #603</div>
+                            <h3 class="template-name">Nexaverse</h3>
+                            <p class="template-description">NexaVerse is a stunning dark glassmorphism template crafted for digital agencies, tech startups, and creative professionals.</p>
+                        </div>
+                    </a>
+
+                    <!-- Template 602 -->
+                    <a href="https://templatemo.com/tm-602-graph-page" target="_blank" class="template-card">
+                        <div class="template-thumbnail">
+                            <img src="https://templatemo.com/thumbnails-360/tm-602-graph-page.jpg" alt="Graph Page Template">
+                        </div>
+                        <div class="template-info">
+                            <div class="template-number">Template #602</div>
+                            <h3 class="template-name">Graph Page</h3>
+                            <p class="template-description">The Graph Page template is a dynamic, one-page HTML design built for data analytics platforms and business intelligence tools.</p>
+                        </div>
+                    </a>
+
+                    <!-- Template 601 -->
+                    <a href="https://templatemo.com/tm-601-chain-summit" target="_blank" class="template-card">
+                        <div class="template-thumbnail">
+                            <img src="https://templatemo.com/thumbnails-360/tm-601-chain-summit.jpg" alt="Chain Summit Template">
+                        </div>
+                        <div class="template-info">
+                            <div class="template-number">Template #601</div>
+                            <h3 class="template-name">Chain Summit</h3>
+                            <p class="template-description">Dive into the future of technology with Chain Summit, a sleek HTML template designed for AI, Blockchain, and cutting-edge tech.</p>
+                        </div>
+                    </a>
+
+                    <!-- Template 600 -->
+                    <a href="https://templatemo.com/tm-600-prism-flux" target="_blank" class="template-card">
+                        <div class="template-thumbnail">
+                            <img src="https://templatemo.com/thumbnails-360/tm-600-prism-flux.jpg" alt="Prism Flux Template">
+                        </div>
+                        <div class="template-info">
+                            <div class="template-number">Template #600</div>
+                            <h3 class="template-name">Prism Flux</h3>
+                            <p class="template-description">PRISM FLUX is a cutting-edge dark-themed HTML template defined by a high-tech carbon fiber aesthetic and prismatic color accents.</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- About TemplateMo -->
+            <section class="about-section">
+                <h2 class="about-title">About TemplateMo</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p><strong>TemplateMo</strong> has been providing free, high-quality HTML CSS website templates since 2008. With over 600 templates in our collection, we've helped thousands of developers, designers, and businesses create beautiful websites.</p>
+                        <p>All our templates are 100% free to download and use for both personal and commercial projects. We believe in making web design accessible to everyone, whether you're a beginner learning web development or a professional designer looking for a quick start.</p>
+                        <p>Each template is carefully crafted with modern design principles, clean code, and mobile responsiveness in mind. Browse our collection and find the perfect template for your next project.</p>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h4>100% Free</h4>
+                                <p>All templates are completely free for personal and commercial use. No hidden fees or subscriptions.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                    <line x1="8" y1="21" x2="16" y2="21"/>
+                                    <line x1="12" y1="17" x2="12" y2="21"/>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Responsive Design</h4>
+                                <p>Every template is fully responsive and works perfectly on all devices and screen sizes.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"/>
+                                    <polyline points="8 6 2 12 8 18"/>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Clean Code</h4>
+                                <p>Well-structured, commented HTML and CSS code that's easy to customize and maintain.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Regular Updates</h4>
+                                <p>New templates added regularly to keep up with the latest web design trends and technologies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="templatemo-footer">
+                <p>Copyright &copy; 2026 TemplateMo. All rights reserved.</p>
+                <p>
+                    <a href="https://templatemo.com" target="_blank">Visit TemplateMo.com</a> | 
+                    <a href="https://templatemo.com/about" target="_blank">About</a> | 
+                    <a href="https://templatemo.com/contact" target="_blank">Contact</a>
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Theme Toggle
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        html.setAttribute('data-theme', savedTheme);
+        
+        // Toggle theme on button click
+        themeToggleBtn.addEventListener('click', function() {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+</body>
+</html>

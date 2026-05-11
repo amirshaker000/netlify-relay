@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Catalyst - Ship Faster, Scale Infinitely</title>
+
+    <!--
+
+    TemplateMo 618 The Catalyst
+
+    https://templatemo.com/tm-618-the-catalyst
+
+    Silver & Acid Light-Mode SaaS Landing Page
+
+    -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="templatemo-catalyst-style.css">
+</head>
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo" aria-label="Catalyst Home">
+                <span class="nav-logo-mark">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8L7 4L13 8L7 12L3 8Z" fill="#111"/>
+                    </svg>
+                </span>
+                Catalyst
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#metrics">Performance</a></li>
+                <li><a href="#engine">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#" class="btn-ghost">Log In</a>
+                <a href="#pricing" class="btn-acid">Start Free</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== SECTION 1: HERO ===== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge reveal">
+                <span class="hero-badge-dot"></span>
+                v4.2 — Now with real-time sync
+            </div>
+            <h1 class="reveal">The analytics platform built for <span class="accent-word">speed</span></h1>
+            <p class="hero-sub reveal">Stop waiting for insights. Catalyst delivers sub-second queries across billions of rows so your team ships decisions, not dashboards.</p>
+            <div class="hero-actions reveal">
+                <a href="#pricing" class="btn-acid">
+                    Start Free Trial
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="#" class="btn-ghost">Watch Demo</a>
+            </div>
+
+            <!-- Dashboard Mockup -->
+            <div class="hero-dashboard reveal">
+                <div class="dashboard-frame">
+                    <div class="dashboard-toolbar">
+                        <div class="dashboard-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="dashboard-toolbar-tabs">
+                            <span class="active">Overview</span>
+                            <span>Funnels</span>
+                            <span>Retention</span>
+                            <span>Revenue</span>
+                        </div>
+                        <div style="width: 50px;"></div>
+                    </div>
+                    <div class="dashboard-body">
+                        <div class="dash-stat-card">
+                            <div class="dash-stat-label">Total Revenue</div>
+                            <div class="dash-stat-value">$2.4M</div>
+                            <div class="dash-stat-change">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 9V3M6 3L3 6M6 3L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                +18.2%
+                            </div>
+                        </div>
+                        <div class="dash-stat-card">
+                            <div class="dash-stat-label">Active Users</div>
+                            <div class="dash-stat-value">48,291</div>
+                            <div class="dash-stat-change">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 9V3M6 3L3 6M6 3L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                +7.4%
+                            </div>
+                        </div>
+                        <div class="dash-stat-card">
+                            <div class="dash-stat-label">Avg. Query Time</div>
+                            <div class="dash-stat-value">42ms</div>
+                            <div class="dash-stat-change">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 9V3M6 3L3 6M6 3L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                -23.5%
+                            </div>
+                        </div>
+                        <div class="dashboard-table-area">
+                            <div class="dash-table-header">
+                                <span>Recent Pipelines</span>
+                                <span class="dash-filter">All teams ▾</span>
+                            </div>
+                            <div class="dash-table">
+                                <div class="dash-table-row head">
+                                    <div class="dash-cell">Pipeline</div>
+                                    <div class="dash-cell">Events / hr</div>
+                                    <div class="dash-cell">Latency</div>
+                                    <div class="dash-cell">Uptime</div>
+                                    <div class="dash-cell">Status</div>
+                                </div>
+                                <div class="dash-table-row">
+                                    <div class="dash-cell dash-cell-name">
+                                        <span class="dash-cell-icon" style="background: #DCFCE7; color: #166534;">P1</span>
+                                        Checkout Funnel
+                                    </div>
+                                    <div class="dash-cell">1.2M</div>
+                                    <div class="dash-cell">34ms</div>
+                                    <div class="dash-cell">99.98%</div>
+                                    <div class="dash-cell"><span class="dash-status active">Active</span></div>
+                                </div>
+                                <div class="dash-table-row">
+                                    <div class="dash-cell dash-cell-name">
+                                        <span class="dash-cell-icon" style="background: #FEF3C7; color: #92400E;">P2</span>
+                                        User Onboarding
+                                    </div>
+                                    <div class="dash-cell">847K</div>
+                                    <div class="dash-cell">52ms</div>
+                                    <div class="dash-cell">99.91%</div>
+                                    <div class="dash-cell"><span class="dash-status pending">Pending</span></div>
+                                </div>
+                                <div class="dash-table-row">
+                                    <div class="dash-cell dash-cell-name">
+                                        <span class="dash-cell-icon" style="background: var(--surface); color: var(--text-muted);">P3</span>
+                                        Revenue Tracker
+                                    </div>
+                                    <div class="dash-cell">2.1M</div>
+                                    <div class="dash-cell">28ms</div>
+                                    <div class="dash-cell">99.99%</div>
+                                    <div class="dash-cell"><span class="dash-status active">Active</span></div>
+                                </div>
+                                <div class="dash-table-row">
+                                    <div class="dash-cell dash-cell-name">
+                                        <span class="dash-cell-icon" style="background: #E0E7FF; color: #3730A3;">P4</span>
+                                        A/B Experiments
+                                    </div>
+                                    <div class="dash-cell">423K</div>
+                                    <div class="dash-cell">61ms</div>
+                                    <div class="dash-cell">99.87%</div>
+                                    <div class="dash-cell"><span class="dash-status draft">Draft</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 2: SPEED METRICS ===== -->
+    <section class="metrics" id="metrics">
+        <div class="container">
+            <p class="metrics-label reveal">Performance that speaks for itself</p>
+            <div class="metrics-grid">
+                <div class="metric-item reveal">
+                    <div class="metric-number"><span class="metric-highlight">42</span><span class="metric-unit">ms</span></div>
+                    <p class="metric-desc">Average query response time across 10B+ row datasets</p>
+                </div>
+                <div class="metric-item reveal">
+                    <div class="metric-number">99.99<span class="metric-unit">%</span></div>
+                    <p class="metric-desc">Guaranteed uptime SLA for all enterprise customers</p>
+                </div>
+                <div class="metric-item reveal">
+                    <div class="metric-number">10<span class="metric-unit">x</span></div>
+                    <p class="metric-desc">Faster than legacy warehouses at one-tenth the cost</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 3: THE ENGINE — BENTO GRID ===== -->
+    <section class="engine" id="engine">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-tag">The Engine</p>
+                <h2 class="section-title">Everything your data team actually needs</h2>
+            </div>
+            <div class="bento-grid">
+                <div class="card bento-card reveal">
+                    <div class="bento-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 4 4-6"/></svg>
+                    </div>
+                    <h3>Real-Time Analytics</h3>
+                    <p>Stream, transform, and visualize data the instant it arrives. No batching, no waiting, no stale dashboards.</p>
+                    <div class="bento-card-visual">
+                        <div class="mini-bars">
+                            <div class="mini-bar" style="height: 35%;"></div>
+                            <div class="mini-bar" style="height: 55%;"></div>
+                            <div class="mini-bar" style="height: 40%;"></div>
+                            <div class="mini-bar highlight" style="height: 80%;"></div>
+                            <div class="mini-bar" style="height: 60%;"></div>
+                            <div class="mini-bar" style="height: 45%;"></div>
+                            <div class="mini-bar highlight" style="height: 95%;"></div>
+                            <div class="mini-bar" style="height: 70%;"></div>
+                            <div class="mini-bar" style="height: 50%;"></div>
+                            <div class="mini-bar" style="height: 65%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bento-card reveal">
+                    <div class="bento-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                    </div>
+                    <h3>Pipeline Orchestration</h3>
+                    <p>Build fault-tolerant data pipelines with visual drag-and-drop. Auto-retry, dead-letter queues, and full observability built in.</p>
+                    <div class="bento-card-visual">
+                        <div class="mini-pipeline">
+                            <div class="mini-pipeline-node">Ingest</div>
+                            <span class="mini-pipeline-arrow">→</span>
+                            <div class="mini-pipeline-node">Transform</div>
+                            <span class="mini-pipeline-arrow">→</span>
+                            <div class="mini-pipeline-node">Deliver</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bento-card reveal">
+                    <div class="bento-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg>
+                    </div>
+                    <h3>SQL-First Interface</h3>
+                    <p>Write standard SQL against any source. Auto-completion, version control, and collaborative editing come standard.</p>
+                    <div class="bento-card-visual">
+                        <div class="mini-code">
+                            <span class="keyword">SELECT</span> user_id, <span class="keyword">COUNT</span>(*)<br>
+                            <span class="keyword">FROM</span> events<br>
+                            <span class="keyword">WHERE</span> ts > <span class="string">'2026-01'</span><br>
+                            <span class="keyword">GROUP BY</span> 1 <span class="comment">-- 42ms ⚡</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 4: PRICING ===== -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-tag">Pricing</p>
+                <h2 class="section-title">Simple, transparent pricing</h2>
+            </div>
+            <div class="toggle-wrap reveal">
+                <div class="toggle-container">
+                    <button class="toggle-btn" data-plan="monthly" id="toggleMonthly">Monthly</button>
+                    <button class="toggle-btn active" data-plan="yearly" id="toggleYearly">Yearly</button>
+                </div>
+                <span class="toggle-save visible" id="toggleSave">Save 25%</span>
+            </div>
+            <div class="pricing-grid">
+                <!-- Starter -->
+                <div class="card pricing-card reveal">
+                    <div class="pricing-plan-name">Starter</div>
+                    <div class="pricing-plan-desc">For small teams getting started</div>
+                    <div class="pricing-amount">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-value" data-monthly="30" data-yearly="22">22</span>
+                    </div>
+                    <p class="pricing-period">per seat / month</p>
+                    <p class="pricing-billed yearly-active" data-monthly="Billed monthly" data-yearly="$264 billed annually">$264 billed annually</p>
+                    <a href="#" class="btn-ghost">Get Started</a>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3.5 3.5L14 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Up to 5 team members
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3.5 3.5L14 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            1 billion events / month
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3.5 3.5L14 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            7-day data retention
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3.5 3.5L14 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Community support
+                        </li>
+                    </ul>
+                </div>
+                <!-- Pro -->
+                <div class="card pricing-card featured reveal">
+                    <div class="pricing-plan-name">Pro</div>
+                    <div class="pricing-plan-desc">For scaling data teams</div>
+                    <div class="pricing-amount">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-value" data-monthly="100" data-yearly="75">75</span>
+                    </div>
+                    <p class="pricing-period">per seat / month</p>
+                    <p class="pricing-billed yearly-active" data-monthly="Billed monthly" data-yearly="$900 billed annually">$900 billed annually</p>
+                    <a href="#" class="btn-acid">Get Started</a>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3.5 3.5L14 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Unlimited team members
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3.5 3.5L14 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            50 billion events / month
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3.5 3.5L14 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Unlimited data retention
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3.5 3.5L14 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Priority support + SLA
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3.5 3.5L14 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            SSO &amp; audit logs
+                        </li>
+                    </ul>
+                </div>
+                <!-- Enterprise -->
+                <div class="card pricing-card reveal">
+                    <div class="pricing-plan-name">Enterprise</div>
+                    <div class="pricing-plan-desc">For mission-critical deployments</div>
+                    <div class="pricing-amount">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-value" data-monthly="500" data-yearly="375">375</span>
+                    </div>
+                    <p class="pricing-period">starts from / month</p>
+                    <p class="pricing-billed yearly-active" data-monthly="Billed monthly" data-yearly="$4,500 billed annually">$4,500 billed annually</p>
+                    <a href="#" class="btn-ghost">Contact Sales</a>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3.5 3.5L14 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Everything in Pro
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3.5 3.5L14 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Dedicated infrastructure
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3.5 3.5L14 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Custom integrations
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3.5 3.5L14 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            24/7 dedicated support
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 18 18" fill="none"><path d="M4 9l3.5 3.5L14 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            99.99% SLA guarantee
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 5: FAQ ===== -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-tag">FAQ</p>
+                <h2 class="section-title">Common questions, straight answers</h2>
+            </div>
+            <div class="faq-controls reveal">
+                <button class="faq-ctrl-btn" id="faqExpandAll">Expand All</button>
+                <button class="faq-ctrl-btn" id="faqCollapseAll">Collapse All</button>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        How long does the free trial last?
+                        <span class="faq-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="#111" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Every plan includes a 14-day free trial with full access to all features. No credit card required to get started. At the end of the trial, you can choose a plan or export your data.</div>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        Can I switch plans later?
+                        <span class="faq-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="#111" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Yes. Upgrade or downgrade any time from your account settings. When upgrading, you only pay the prorated difference. When downgrading, the remaining balance is applied as credit toward future invoices.</div>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        What data sources do you support?
+                        <span class="faq-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="#111" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Catalyst connects to 50+ data sources out of the box, including PostgreSQL, MySQL, BigQuery, Snowflake, Redshift, S3, Kafka, and most popular REST APIs. Custom connectors are available on the Enterprise plan.</div>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        Is my data secure?
+                        <span class="faq-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="#111" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Absolutely. All data is encrypted at rest (AES-256) and in transit (TLS 1.3). We are SOC 2 Type II certified and GDPR compliant. Enterprise customers also get dedicated infrastructure with VPC peering and custom encryption keys.</div>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        Do you offer onboarding support?
+                        <span class="faq-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="#111" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Pro customers get access to our onboarding team for the first 30 days. Enterprise customers receive a dedicated solutions engineer for the full implementation. All plans include access to our docs, tutorials, and community forum.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 6: CTA BANNER ===== -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-banner-inner reveal">
+                <p class="cta-banner-tag">Get started today</p>
+                <h2>Ready to accelerate your data?</h2>
+                <p>Join 2,000+ teams shipping faster with sub-second analytics. Free for 14 days.</p>
+                <div class="cta-banner-actions">
+                    <a href="#" class="btn-acid">
+                        Start Free Trial
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="#" class="btn-dark-ghost">Talk to Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 7: FOOTER ===== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="nav-logo" aria-label="Catalyst Home">
+                        <span class="nav-logo-mark">
+                            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 8L7 4L13 8L7 12L3 8Z" fill="#111"/>
+                            </svg>
+                        </span>
+                        Catalyst
+                    </a>
+                    <p class="footer-brand-desc">The analytics platform built for speed. Sub-second queries, real-time pipelines, and infinite scale.</p>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Changelog</a></li>
+                        <li><a href="#">Status Page</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community Forum</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">System Status</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Twitter / X</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 Catalyst Inc. All rights reserved. Design: <a href="https://templatemo.com/tm-618-the-catalyst" target="_blank" rel="nofollow">TemplateMo</a></p>
+                <ul class="footer-bottom-links">
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Template JS -->
+    <script src="templatemo-catalyst-script.js"></script>
+
+</body>
+</html>
